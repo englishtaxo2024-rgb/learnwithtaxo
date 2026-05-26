@@ -3,28 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn with Taxo - Deployment Mode</title>
-    <style>
-      :root{--dark:#061B30;--navy:#0B2A4A;--gold:#D4AF37;--light:#C3E1F5;--white:#fff}
-      *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 20% 10%,rgba(53,160,213,.22),transparent 28rem),linear-gradient(135deg,var(--dark),var(--navy));color:var(--white);font-family:Inter,Segoe UI,Arial,sans-serif;padding:24px}.card{width:min(860px,100%);border:1px solid rgba(195,225,245,.18);border-radius:10px;background:rgba(255,255,255,.075);box-shadow:0 24px 80px rgba(0,0,0,.28);padding:28px}.brand{display:flex;align-items:center;gap:16px}.brand img{height:86px;max-width:320px;object-fit:contain}.warn{display:inline-block;border:1px solid rgba(212,175,55,.45);border-radius:999px;padding:6px 12px;color:var(--gold);font-weight:800}.muted{color:var(--light);line-height:1.7}.code{display:block;margin:12px 0;border-radius:8px;background:rgba(0,0,0,.25);padding:14px;color:var(--light);font-family:Consolas,monospace}.rtl{direction:rtl}.logoWarn{border:1px solid rgba(251,113,133,.45);border-radius:8px;background:rgba(251,113,133,.12);padding:9px 12px;color:#ffe4e6;font-size:13px;font-weight:850}
-    </style>
+    <meta name="theme-color" content="#061B30" />
+    <meta name="description" content="Learn with Taxo full-stack portal for placement tests, student profiles, teacher dashboards, manual payment confirmation, and protected learning material." />
+    <title>Learn with Taxo</title>
   </head>
   <body>
-    <main class="card">
-      <div class="brand">
-        <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logoWarn',textContent:'Official logo missing. Add it to public/assets/logo.png'}))" />
-        <div><strong>LEARN WITH TAXO</strong><br /><span style="color:var(--gold);font-weight:800">Learn to Lead</span><br /><small class="muted">اتعلم اليوم... واسبق بكره</small></div>
-      </div>
-      <p class="warn">Deployment mode needs correction</p>
-      <h1>This is a full-stack Node/Vite app, not the old static preview.</h1>
-      <p class="muted">If you are seeing this page on Hostinger, Hostinger is serving the repository root as static files. The production portal must be deployed as a Node.js Web App so <b>server/index.js</b> can serve the built React app and protected API.</p>
-      <p class="muted rtl">إذا ظهرت هذه الصفحة، فهذا يعني أن الاستضافة تعرض ملفات ثابتة فقط. يجب تشغيل الموقع كتطبيق Node.js حتى تعمل لوحة الطالب والمعلم والإدارة ورفع الملفات والاختبارات.</p>
-      <span class="code">Install: npm install</span>
-      <span class="code">Build: npm run build</span>
-      <span class="code">Start: npm start</span>
-      <span class="code">Entry file: server/index.js</span>
-      <span class="code">Output directory: dist</span>
-      <p class="muted">No payment gateway is used. Payment confirmation is manual proof upload only.</p>
-    </main>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
