@@ -2,25 +2,25 @@
 
 ## Deployment Type
 
-This project is a full-stack app:
+This project is a **full-stack app**:
 
 - Frontend: Vite + React static build in `dist/`
 - Backend: Node.js + Express API in `server/index.js`
 - Storage fallback: local files in `server/uploads`
 - Database fallback: JSON file in `server/data/db.json`
 
-It is not a Next.js app.
+It is **not** a Next.js app.
 
 ## Hostinger Settings
 
-Use Node.js Web App hosting, not static-only hosting, for the production portal.
+Use **Node.js Web App hosting**, not static-only hosting, for the production portal.
 
 - Install command: `npm install`
 - Build command: `npm run build`
 - Start command: `npm start`
 - Output directory: `dist`
 - Entry file: `server/index.js`
-- Node version: 18 or newer
+- Node version: 20 LTS
 - App port: use Hostinger's provided `PORT` environment variable
 
 The Express server serves:
@@ -33,7 +33,9 @@ The Express server serves:
 
 Do not let Hostinger serve the old root `public_html/index.html`.
 
-For this full app, Hostinger must run `server/index.js` after `npm run build`. If you use static hosting only, you will only see the old preview/fallback page and API features will not work.
+For this full app, Hostinger must run `server/index.js` after `npm run build`. If you use static hosting only, the backend API, authentication, upload storage, placement tests, and protected dashboards will not work.
+
+If a file already exists in `public_html/index.html` from the old static deployment, remove/replace the old static deployment target and use Node.js Web App deployment instead. The Vite `index.html` in this repository is only a build entry file; it is not the production server.
 
 ## Environment Variables
 
