@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learn with Taxo Preview</title>
+    <style>
+      :root{--dark:#061B30;--navy:#0B2A4A;--royal:#123F6D;--blue:#245F97;--bright:#35A0D5;--light:#C3E1F5;--gold:#D4AF37;--white:#fff}
+      *{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--white);background:radial-gradient(circle at 10% 10%,rgba(53,160,213,.24),transparent 28rem),radial-gradient(circle at 80% 5%,rgba(212,175,55,.16),transparent 32rem),linear-gradient(135deg,var(--dark),var(--navy) 55%,var(--dark));min-height:100vh}
+      header{position:sticky;top:0;z-index:5;background:rgba(6,27,48,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.12)}
+      .wrap{max-width:1180px;margin:auto;padding:18px}.brand{display:flex;align-items:center;gap:14px}.logo{width:64px;height:64px;object-fit:contain}.fallback{display:grid;place-items:center;width:64px;height:64px;border:1px solid rgba(212,175,55,.55);border-radius:8px;color:var(--gold);font-size:28px;font-weight:900;background:rgba(255,255,255,.06)}
+      .brand strong{display:block;font-size:15px;letter-spacing:.04em}.brand span{display:block;color:var(--gold);font-weight:700}.brand small{display:block;color:var(--light)}
+      .hero{position:relative;overflow:hidden;padding:70px 18px 40px}.blob{position:absolute;border-radius:50%;filter:blur(48px);animation:blob 9s ease-in-out infinite}.b1{width:250px;height:250px;background:rgba(53,160,213,.2);left:3%;top:12%}.b2{width:310px;height:310px;background:rgba(212,175,55,.14);right:8%;top:6%;animation-delay:1s}@keyframes blob{50%{transform:translate(22px,-18px) scale(1.08)}}
+      .grid{display:grid;gap:22px}.heroGrid{grid-template-columns:1.1fr .9fr;align-items:center}.glass{border:1px solid rgba(195,225,245,.18);background:rgba(255,255,255,.075);box-shadow:0 20px 70px rgba(0,0,0,.25);backdrop-filter:blur(18px);border-radius:8px;padding:22px}.h1{font-size:clamp(40px,6vw,72px);line-height:1.02;margin:34px 0 20px;font-weight:950}.lead{font-size:19px;line-height:1.7;color:var(--light);max-width:720px}
+      .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{border:0;border-radius:6px;padding:13px 18px;font-weight:850;cursor:pointer;background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.16)}.primary{background:var(--gold);color:var(--dark);border-color:transparent;box-shadow:0 0 30px rgba(212,175,55,.18)}
+      .cards{grid-template-columns:repeat(4,1fr);margin-top:24px}.card{transition:.2s}.card:hover{transform:translateY(-5px)}.icon{display:grid;place-items:center;width:44px;height:44px;border-radius:8px;background:rgba(212,175,55,.15);color:var(--gold);font-size:24px;margin-bottom:14px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--light);line-height:1.55}.section{padding:24px 18px 70px}.portal{grid-template-columns:280px 1fr}.side a{display:block;text-decoration:none;color:var(--light);padding:11px 12px;border-radius:6px;margin:4px 0}.side a:first-child,.side a:hover{background:var(--gold);color:var(--dark);font-weight:850}
+      .stats{grid-template-columns:repeat(4,1fr)}.table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:8px}.table th,.table td{padding:13px;border-bottom:1px solid rgba(255,255,255,.1);text-align:left}.table th{color:var(--gold);font-size:12px;text-transform:uppercase;background:rgba(255,255,255,.08)}.badge{display:inline-block;border:1px solid rgba(212,175,55,.35);background:rgba(212,175,55,.14);color:var(--gold);padding:5px 9px;border-radius:99px;font-size:12px;font-weight:800}
+      @media(max-width:850px){.heroGrid,.portal,.cards,.stats{grid-template-columns:1fr}.side{display:none}.logo,.fallback{width:52px;height:52px}.hero{padding-top:38px}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap brand">
+        <img class="logo" src="public/assets/logo.png" alt="Learn with Taxo logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'T'}))" />
+        <div><strong>LEARN WITH TAXO</strong><span>Learn to Lead</span><small>اتعلم اليوم... واسبق بكره</small></div>
+      </div>
+    </header>
+    <main class="hero">
+      <div class="blob b1"></div><div class="blob b2"></div>
+      <div class="wrap grid heroGrid">
+        <section>
+          <div class="brand"><div class="fallback">T</div><div><strong>LEARN WITH TAXO</strong><span>Learn to Lead</span><small>اتعلم اليوم... واسبق بكره</small></div></div>
+          <h1 class="h1">Premium English learning, guided from placement to certificate.</h1>
+          <p class="lead">A complete bilingual portal for placement, booking, EasyKash payment proof review, homework, feedback, protected teacher material, reports, and certificates.</p>
+          <div class="actions"><button class="btn primary">Start placement</button><button class="btn">Teacher login</button><button class="btn">Owner/Admin</button></div>
+        </section>
+        <section class="glass grid cards" style="grid-template-columns:1fr 1fr">
+          <article class="card"><div class="icon">📘</div><h3>Placement first</h3><p>No free live Zoom placement tests.</p></article>
+          <article class="card"><div class="icon">📅</div><h3>Smart booking</h3><p>Teacher, level, age, and capacity aware.</p></article>
+          <article class="card"><div class="icon">💳</div><h3>EasyKash flow</h3><p>Proof upload and admin approval.</p></article>
+          <article class="card"><div class="icon">🏆</div><h3>Progress portal</h3><p>Reports, tests, and certificates.</p></article>
+        </section>
+      </div>
+    </main>
+    <section class="section">
+      <div class="wrap grid portal">
+        <nav class="glass side">
+          <a href="#">Command Center</a><a href="#">Students</a><a href="#">Payment Approvals</a><a href="#">Data Sources</a><a href="#">Assets</a><a href="#">Audit Log</a>
+        </nav>
+        <div class="grid">
+          <div class="grid stats">
+            <article class="glass"><div class="icon">👤</div><h3>Students</h3><p style="font-size:30px;font-weight:950">128</p></article>
+            <article class="glass"><div class="icon">💳</div><h3>Pending payments</h3><p style="font-size:30px;font-weight:950">7</p></article>
+            <article class="glass"><div class="icon">📤</div><h3>Import review</h3><p style="font-size:30px;font-weight:950">5</p></article>
+            <article class="glass"><div class="icon">🛡</div><h3>Audit events</h3><p style="font-size:30px;font-weight:950">42</p></article>
+          </div>
+          <section class="glass">
+            <h2>Admin Review Queue</h2>
+            <table class="table"><thead><tr><th>Issue</th><th>Record</th><th>Status</th></tr></thead><tbody>
+              <tr><td>Missing teacher name</td><td>Schedule row needs blue section header confirmation</td><td><span class="badge">Manual review</span></td></tr>
+              <tr><td>Permission required</td><td>New Applications sheet may return 403 until shared</td><td><span class="badge">Fallback enabled</span></td></tr>
+            </tbody></table>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
