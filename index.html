@@ -153,7 +153,7 @@
       <main class="fallback-shell">
         <section class="fallback-panel">
           <header class="fallback-header">
-            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="this.style.display='none';document.querySelector('.fallback-logo-warning').style.display='block';" />
+            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="if(!this.dataset.triedPublic){this.dataset.triedPublic='1';this.src='/public/assets/logo.png';}else{this.style.display='none';document.querySelector('.fallback-logo-warning').style.display='block';}" />
             <div class="fallback-logo-warning">Official logo missing. Add it to public/assets/logo.png</div>
             <div>
               <strong>LEARN WITH TAXO</strong><br />
