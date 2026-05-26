@@ -8,7 +8,207 @@
     <title>Learn with Taxo</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <style>
+        :root {
+          --dark: #061B30;
+          --navy: #0B2A4A;
+          --royal: #123F6D;
+          --gold: #D4AF37;
+          --light: #C3E1F5;
+          --white: #FFFFFF;
+        }
+        * { box-sizing: border-box; }
+        body {
+          margin: 0;
+          min-height: 100vh;
+          background:
+            radial-gradient(circle at 20% 8%, rgba(53, 160, 213, .24), transparent 28rem),
+            radial-gradient(circle at 82% 18%, rgba(212, 175, 55, .14), transparent 24rem),
+            linear-gradient(135deg, var(--dark), var(--navy) 54%, #041424);
+          color: var(--white);
+          font-family: Inter, "Segoe UI", Arial, sans-serif;
+        }
+        .fallback-shell {
+          min-height: 100vh;
+          display: grid;
+          place-items: center;
+          padding: 28px;
+        }
+        .fallback-panel {
+          width: min(1040px, 100%);
+          border: 1px solid rgba(195, 225, 245, .18);
+          border-radius: 12px;
+          background: rgba(255,255,255,.08);
+          box-shadow: 0 28px 90px rgba(0,0,0,.34);
+          overflow: hidden;
+        }
+        .fallback-header {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          padding: 22px 24px;
+          border-bottom: 1px solid rgba(255,255,255,.1);
+          background: rgba(6, 27, 48, .78);
+        }
+        .fallback-header img {
+          width: 88px;
+          height: 88px;
+          object-fit: contain;
+        }
+        .fallback-logo-warning {
+          display: none;
+          border: 1px solid rgba(248, 113, 113, .5);
+          border-radius: 8px;
+          color: #fee2e2;
+          background: rgba(248, 113, 113, .12);
+          padding: 10px 12px;
+          font-size: 13px;
+          font-weight: 800;
+        }
+        .fallback-body {
+          display: grid;
+          gap: 22px;
+          padding: 34px;
+        }
+        .fallback-kicker {
+          color: var(--gold);
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: .08em;
+          font-size: 12px;
+        }
+        .fallback-title {
+          margin: 0;
+          max-width: 820px;
+          font-size: clamp(34px, 6vw, 66px);
+          line-height: .98;
+          letter-spacing: 0;
+        }
+        .fallback-copy {
+          margin: 0;
+          max-width: 760px;
+          color: var(--light);
+          font-size: 18px;
+          line-height: 1.75;
+        }
+        .fallback-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+        }
+        .fallback-card {
+          border: 1px solid rgba(255,255,255,.11);
+          border-radius: 8px;
+          background: rgba(255,255,255,.07);
+          padding: 18px;
+        }
+        .fallback-card strong {
+          display: block;
+          color: var(--gold);
+          margin-bottom: 8px;
+        }
+        .fallback-code {
+          display: block;
+          margin-top: 8px;
+          border-radius: 7px;
+          background: rgba(0,0,0,.24);
+          color: var(--light);
+          padding: 10px;
+          font-family: Consolas, monospace;
+          font-size: 13px;
+        }
+        .fallback-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+        .fallback-button {
+          display: inline-flex;
+          min-height: 46px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 6px;
+          padding: 0 18px;
+          color: #061B30;
+          background: linear-gradient(135deg, #F8E6A0, var(--gold));
+          font-weight: 900;
+          text-decoration: none;
+        }
+        .fallback-button.secondary {
+          color: var(--white);
+          background: rgba(255,255,255,.1);
+          border: 1px solid rgba(255,255,255,.16);
+        }
+        [dir="rtl"] {
+          font-family: "Segoe UI", Arial, sans-serif;
+        }
+        @media (max-width: 760px) {
+          .fallback-header { align-items: flex-start; }
+          .fallback-header img { width: 70px; height: 70px; }
+          .fallback-body { padding: 24px; }
+          .fallback-grid { grid-template-columns: 1fr; }
+        }
+      </style>
+      <main class="fallback-shell">
+        <section class="fallback-panel">
+          <header class="fallback-header">
+            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="this.style.display='none';document.querySelector('.fallback-logo-warning').style.display='block';" />
+            <div class="fallback-logo-warning">Official logo missing. Add it to public/assets/logo.png</div>
+            <div>
+              <strong>LEARN WITH TAXO</strong><br />
+              <span style="color: var(--gold); font-weight: 900;">Learn to Lead</span><br />
+              <span style="color: var(--light);" dir="rtl">اتعلم اليوم... واسبق بكره</span>
+            </div>
+          </header>
+          <div class="fallback-body">
+            <div class="fallback-kicker">Full-stack portal is ready</div>
+            <h1 class="fallback-title">Learn with Taxo needs Node.js Web App mode on Hostinger.</h1>
+            <p class="fallback-copy">
+              This screen appears only when Hostinger serves the repository root as static files.
+              The real portal is a Node/Vite app with protected dashboards, API routes, uploads,
+              CSV data import, placement tests, and manual payment confirmation.
+            </p>
+            <p class="fallback-copy" dir="rtl">
+              إذا ظهرت هذه الصفحة، فهذا يعني أن هوستنجر يعرض ملفات ثابتة فقط. شغلي الموقع كتطبيق Node.js Web App حتى تعمل لوحة الطالب والمعلم والإدارة ورفع الملفات والاختبارات.
+            </p>
+            <div class="fallback-grid">
+              <div class="fallback-card">
+                <strong>Install</strong>
+                <code class="fallback-code">npm install</code>
+              </div>
+              <div class="fallback-card">
+                <strong>Build</strong>
+                <code class="fallback-code">npm run build</code>
+              </div>
+              <div class="fallback-card">
+                <strong>Start</strong>
+                <code class="fallback-code">npm start</code>
+              </div>
+            </div>
+            <div class="fallback-grid">
+              <div class="fallback-card">
+                <strong>Entry file</strong>
+                <code class="fallback-code">server/index.js</code>
+              </div>
+              <div class="fallback-card">
+                <strong>Output directory</strong>
+                <code class="fallback-code">dist</code>
+              </div>
+              <div class="fallback-card">
+                <strong>Node version</strong>
+                <code class="fallback-code">20 LTS</code>
+              </div>
+            </div>
+            <div class="fallback-actions">
+              <a class="fallback-button" href="/login">Open portal login</a>
+              <a class="fallback-button secondary" href="/placement-test">Placement test</a>
+              <a class="fallback-button secondary" href="/api/health">API health</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
