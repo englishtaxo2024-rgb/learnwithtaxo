@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #ffffff;
+  background: #061B30;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(53,160,213,.2), transparent 34rem),
+    radial-gradient(circle at 85% 10%, rgba(212,175,55,.12), transparent 30rem),
+    linear-gradient(135deg, #061B30, #0B2A4A 56%, #061B30);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass {
+  border: 1px solid rgba(195,225,245,.18);
+  background: rgba(255,255,255,.07);
+  box-shadow: 0 20px 70px rgba(0,0,0,.24);
+  backdrop-filter: blur(18px);
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: -80% auto auto -40%;
+  width: 60%;
+  height: 240%;
+  transform: rotate(25deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.34), transparent);
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0%, 55% { left: -80%; }
+  100% { left: 140%; }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(18px, -22px) scale(1.08); }
+}
+
+.blob {
+  animation: blob 9s ease-in-out infinite;
+}
+
+.rtl {
+  direction: rtl;
+}
