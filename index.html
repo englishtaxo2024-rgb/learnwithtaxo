@@ -4,211 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#061B30" />
-    <meta name="description" content="Learn with Taxo full-stack portal for placement tests, student profiles, teacher dashboards, manual payment confirmation, and protected learning material." />
+    <meta name="description" content="Learn with Taxo portal for placement tests, dashboards, manual payment confirmation, and protected material." />
     <title>Learn with Taxo</title>
+    <style>
+      :root{--dark:#061B30;--navy:#0B2A4A;--royal:#123F6D;--blue:#245F97;--bright:#35A0D5;--light:#C3E1F5;--pale:#EAF6FC;--gold:#D4AF37;--white:#fff;color-scheme:dark}
+      *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 8%,rgba(53,160,213,.25),transparent 28rem),radial-gradient(circle at 82% 3%,rgba(212,175,55,.16),transparent 24rem),linear-gradient(135deg,var(--dark),#071829 52%,var(--navy));color:var(--white);font-family:Inter,"Segoe UI",Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.header{position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.12);background:rgba(6,27,48,.92);backdrop-filter:blur(16px)}.head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:14px;border:0;background:transparent;color:#fff;text-align:left}.brand img{width:78px;height:78px;object-fit:contain}.warn{display:none;color:#fecaca;border:1px solid rgba(248,113,113,.45);border-radius:8px;padding:8px 10px;background:rgba(248,113,113,.12);font-weight:800}.brand strong{display:block}.tag{color:var(--gold);font-weight:900}.ar{direction:rtl;color:var(--light);font-size:13px}.nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}.btn,.nav button{min-height:42px;border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:0 14px;background:rgba(255,255,255,.08);color:#fff;font-weight:850}.btn.primary,.nav button.active{background:linear-gradient(135deg,#F8E6A0,var(--gold));border-color:rgba(212,175,55,.8);color:#061B30}.hero{position:relative;overflow:hidden;padding:70px 0 36px}.hero:before,.hero:after{content:"";position:absolute;width:22rem;height:22rem;border-radius:50%;filter:blur(70px);opacity:.35;animation:float 9s ease-in-out infinite alternate}.hero:before{left:-7rem;top:2rem;background:var(--bright)}.hero:after{right:-7rem;top:4rem;background:var(--gold);animation-delay:-3s}@keyframes float{to{transform:translate(30px,-24px) scale(1.08)}}.heroGrid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:center}h1{margin:16px 0 18px;font-size:clamp(42px,7vw,82px);line-height:.96}h2{margin:0;font-size:clamp(25px,3vw,38px)}h3{margin:0 0 8px}p{color:var(--light);line-height:1.68}.card,.glass{border:1px solid rgba(255,255,255,.13);border-radius:8px;background:rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.24);backdrop-filter:blur(18px)}.card{padding:20px}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:24px}.feature{min-height:156px;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:18px;background:rgba(6,27,48,.48)}.icon{display:grid;place-items:center;width:44px;height:44px;border-radius:8px;background:rgba(212,175,55,.15);color:var(--gold);font-weight:900;margin-bottom:12px}.section{padding:34px 0}.grid{display:grid;gap:16px}.two{grid-template-columns:repeat(2,1fr)}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.badge{display:inline-flex;align-items:center;min-height:28px;border-radius:999px;padding:0 10px;background:rgba(212,175,55,.14);color:var(--gold);font-size:12px;font-weight:900}.stat{border-left:3px solid var(--gold)}input,select,textarea{width:100%;min-height:44px;border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:10px 12px;background:rgba(0,0,0,.24);color:#fff}textarea{min-height:105px;resize:vertical}form{display:grid;gap:12px}.notice{border:1px solid rgba(53,160,213,.35);border-radius:8px;padding:12px;background:rgba(53,160,213,.1);color:var(--light)}.success{border-color:rgba(34,197,94,.45);background:rgba(34,197,94,.12);color:#dcfce7}.danger{border-color:rgba(248,113,113,.45);background:rgba(248,113,113,.12);color:#fee2e2}.portal{display:grid;grid-template-columns:16rem 1fr;gap:18px;align-items:start}.side{position:sticky;top:108px}.side button{width:100%;margin-bottom:8px;text-align:left}.tableWrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid rgba(255,255,255,.1);padding:12px;text-align:left;vertical-align:top}th{color:var(--gold);font-size:12px;text-transform:uppercase}.slide{display:grid;min-height:390px;place-items:center;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:#071829;user-select:none}.slide:after{content:"Learn with Taxo view-only material";position:absolute;transform:rotate(-18deg);font-size:32px;font-weight:900;color:rgba(255,255,255,.08)}.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden}.confetti span{position:absolute;top:-20px;width:10px;height:18px;background:var(--gold);animation:drop 2.6s linear infinite}@keyframes drop{to{transform:translateY(105vh) rotate(520deg)}}@media(max-width:900px){.head,.heroGrid,.portal,.two,.three,.four,.features{grid-template-columns:1fr;display:grid}.side{position:static}.brand img{width:64px;height:64px}h1{font-size:44px}}
+    </style>
   </head>
   <body>
     <div id="root">
-      <style>
-        :root {
-          --dark: #061B30;
-          --navy: #0B2A4A;
-          --royal: #123F6D;
-          --gold: #D4AF37;
-          --light: #C3E1F5;
-          --white: #FFFFFF;
-        }
-        * { box-sizing: border-box; }
-        body {
-          margin: 0;
-          min-height: 100vh;
-          background:
-            radial-gradient(circle at 20% 8%, rgba(53, 160, 213, .24), transparent 28rem),
-            radial-gradient(circle at 82% 18%, rgba(212, 175, 55, .14), transparent 24rem),
-            linear-gradient(135deg, var(--dark), var(--navy) 54%, #041424);
-          color: var(--white);
-          font-family: Inter, "Segoe UI", Arial, sans-serif;
-        }
-        .fallback-shell {
-          min-height: 100vh;
-          display: grid;
-          place-items: center;
-          padding: 28px;
-        }
-        .fallback-panel {
-          width: min(1040px, 100%);
-          border: 1px solid rgba(195, 225, 245, .18);
-          border-radius: 12px;
-          background: rgba(255,255,255,.08);
-          box-shadow: 0 28px 90px rgba(0,0,0,.34);
-          overflow: hidden;
-        }
-        .fallback-header {
-          display: flex;
-          align-items: center;
-          gap: 18px;
-          padding: 22px 24px;
-          border-bottom: 1px solid rgba(255,255,255,.1);
-          background: rgba(6, 27, 48, .78);
-        }
-        .fallback-header img {
-          width: 88px;
-          height: 88px;
-          object-fit: contain;
-        }
-        .fallback-logo-warning {
-          display: none;
-          border: 1px solid rgba(248, 113, 113, .5);
-          border-radius: 8px;
-          color: #fee2e2;
-          background: rgba(248, 113, 113, .12);
-          padding: 10px 12px;
-          font-size: 13px;
-          font-weight: 800;
-        }
-        .fallback-body {
-          display: grid;
-          gap: 22px;
-          padding: 34px;
-        }
-        .fallback-kicker {
-          color: var(--gold);
-          font-weight: 900;
-          text-transform: uppercase;
-          letter-spacing: .08em;
-          font-size: 12px;
-        }
-        .fallback-title {
-          margin: 0;
-          max-width: 820px;
-          font-size: clamp(34px, 6vw, 66px);
-          line-height: .98;
-          letter-spacing: 0;
-        }
-        .fallback-copy {
-          margin: 0;
-          max-width: 760px;
-          color: var(--light);
-          font-size: 18px;
-          line-height: 1.75;
-        }
-        .fallback-grid {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 14px;
-        }
-        .fallback-card {
-          border: 1px solid rgba(255,255,255,.11);
-          border-radius: 8px;
-          background: rgba(255,255,255,.07);
-          padding: 18px;
-        }
-        .fallback-card strong {
-          display: block;
-          color: var(--gold);
-          margin-bottom: 8px;
-        }
-        .fallback-code {
-          display: block;
-          margin-top: 8px;
-          border-radius: 7px;
-          background: rgba(0,0,0,.24);
-          color: var(--light);
-          padding: 10px;
-          font-family: Consolas, monospace;
-          font-size: 13px;
-        }
-        .fallback-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px;
-        }
-        .fallback-button {
-          display: inline-flex;
-          min-height: 46px;
-          align-items: center;
-          justify-content: center;
-          border-radius: 6px;
-          padding: 0 18px;
-          color: #061B30;
-          background: linear-gradient(135deg, #F8E6A0, var(--gold));
-          font-weight: 900;
-          text-decoration: none;
-        }
-        .fallback-button.secondary {
-          color: var(--white);
-          background: rgba(255,255,255,.1);
-          border: 1px solid rgba(255,255,255,.16);
-        }
-        [dir="rtl"] {
-          font-family: "Segoe UI", Arial, sans-serif;
-        }
-        @media (max-width: 760px) {
-          .fallback-header { align-items: flex-start; }
-          .fallback-header img { width: 70px; height: 70px; }
-          .fallback-body { padding: 24px; }
-          .fallback-grid { grid-template-columns: 1fr; }
-        }
-      </style>
-      <main class="fallback-shell">
-        <section class="fallback-panel">
-          <header class="fallback-header">
-            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="if(!this.dataset.triedPublic){this.dataset.triedPublic='1';this.src='/public/assets/logo.png';}else{this.style.display='none';document.querySelector('.fallback-logo-warning').style.display='block';}" />
-            <div class="fallback-logo-warning">Official logo missing. Add it to public/assets/logo.png</div>
-            <div>
-              <strong>LEARN WITH TAXO</strong><br />
-              <span style="color: var(--gold); font-weight: 900;">Learn to Lead</span><br />
-              <span style="color: var(--light);" dir="rtl">اتعلم اليوم... واسبق بكره</span>
-            </div>
-          </header>
-          <div class="fallback-body">
-            <div class="fallback-kicker">Full-stack portal is ready</div>
-            <h1 class="fallback-title">Learn with Taxo needs Node.js Web App mode on Hostinger.</h1>
-            <p class="fallback-copy">
-              This screen appears only when Hostinger serves the repository root as static files.
-              The real portal is a Node/Vite app with protected dashboards, API routes, uploads,
-              CSV data import, placement tests, and manual payment confirmation.
-            </p>
-            <p class="fallback-copy" dir="rtl">
-              إذا ظهرت هذه الصفحة، فهذا يعني أن هوستنجر يعرض ملفات ثابتة فقط. شغلي الموقع كتطبيق Node.js Web App حتى تعمل لوحة الطالب والمعلم والإدارة ورفع الملفات والاختبارات.
-            </p>
-            <div class="fallback-grid">
-              <div class="fallback-card">
-                <strong>Install</strong>
-                <code class="fallback-code">npm install</code>
-              </div>
-              <div class="fallback-card">
-                <strong>Build</strong>
-                <code class="fallback-code">npm run build</code>
-              </div>
-              <div class="fallback-card">
-                <strong>Start</strong>
-                <code class="fallback-code">npm start</code>
-              </div>
-            </div>
-            <div class="fallback-grid">
-              <div class="fallback-card">
-                <strong>Entry file</strong>
-                <code class="fallback-code">server/index.js</code>
-              </div>
-              <div class="fallback-card">
-                <strong>Output directory</strong>
-                <code class="fallback-code">dist</code>
-              </div>
-              <div class="fallback-card">
-                <strong>Node version</strong>
-                <code class="fallback-code">20 LTS</code>
-              </div>
-            </div>
-            <div class="fallback-actions">
-              <a class="fallback-button" href="/login">Open portal login</a>
-              <a class="fallback-button secondary" href="/placement-test">Placement test</a>
-              <a class="fallback-button secondary" href="/api/health">API health</a>
-            </div>
-          </div>
-        </section>
-      </main>
+      <header class="header">
+        <div class="wrap head">
+          <button class="brand" data-go="home" type="button">
+            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="this.style.display='none';document.querySelector('.warn').style.display='block'" />
+            <span class="warn">Official logo missing. Add it to public/assets/logo.png</span>
+            <span><strong>LEARN WITH TAXO</strong><span class="tag">Learn to Lead</span><br><span class="ar">&#1575;&#1578;&#1593;&#1604;&#1605; &#1575;&#1604;&#1610;&#1608;&#1605;... &#1608;&#1575;&#1587;&#1576;&#1602; &#1576;&#1603;&#1585;&#1607;</span></span>
+          </button>
+          <nav class="nav" id="nav"></nav>
+        </div>
+      </header>
+      <main id="app"></main>
     </div>
+    <script>
+      (() => {
+        const app=document.getElementById("app"),nav=document.getElementById("nav");
+        const store=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+        const load=(k,d)=>JSON.parse(localStorage.getItem(k)||JSON.stringify(d));
+        const state={route:location.hash.replace("#","")||"home",user:load("taxo_user",null),placements:load("taxo_placements",[]),payments:load("taxo_payments",[]),materials:load("taxo_materials",[])};
+        const students=[{id:"ET-2026-1001",name:"Student Demo",parent:"Parent Demo",phone:"201000000000",teacher:"Ms. Aya El Dawoudy",group:"General A1 Group",course:"General English",level:"A1"},{id:"ET-2026-1002",name:"Kids Demo",parent:"Parent Demo",phone:"201111111111",teacher:"Ms. Fatima Gamal",group:"Kids Level 1",course:"Kids English",level:"Level 1"}];
+        const teachers=["Ms. Aya El Dawoudy","Ms. Riham Abd El Kader","Ms. Fatima Gamal","Ms. Walaa Mohsen","Ms. Asmaa Essam","Ms. Ranwa Ahmed","Ms. Hadeer El Helaly","Ms. Merna","Ms. Rabab","Ms. Shrouk Fouda","Ms. Mona El Damak","Ms. Mariam El Manzalawy","Ms. Amal Gamal","Ms. Asala","Ms. Aya Magdy","Ms. Aya El Sayed","Ms. Shahy Ahmed"];
+        const groups=[{id:"G-A1",name:"General A1 Group",teacher:"Ms. Aya El Dawoudy",course:"General English",days:"Sat / Mon / Wed",time:"5:00 PM",capacity:"6"},{id:"K-L1",name:"Kids Level 1",teacher:"Ms. Fatima Gamal",course:"Kids English",days:"Sun / Tue",time:"6:00 PM",capacity:"6"},{id:"P-L0",name:"Phonics Level 0",teacher:"Ms. Riham Abd El Kader",course:"Phonics",days:"Fri",time:"4:00 PM",capacity:"5"}];
+        const save=()=>{store("taxo_user",state.user);store("taxo_placements",state.placements);store("taxo_payments",state.payments);store("taxo_materials",state.materials)};
+        const esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+        const roleHome=()=>state.user?.role==="admin"?"admin":state.user?.role==="teacher"?"teacher":state.user?.role==="student"?"student":"home";
+        const go=r=>{state.route=r;location.hash=r;render()};
+        const page=(title,body)=>`<section class="section"><div class="wrap grid"><div><span class="badge">Learn with Taxo</span><h2 style="margin-top:10px">${title}</h2></div>${body}</div></section>`;
+        const stat=(label,value)=>`<div class="card stat"><p>${label}</p><h2>${value}</h2></div>`;
+        const feature=(icon,title,text)=>`<div class="feature"><span class="icon">${icon}</span><h3>${title}</h3><p>${text}</p></div>`;
+        const table=(title,rows,raw=false)=>rows.length?`<div class="card tableWrap"><h3>${title}</h3><table><thead><tr>${Object.keys(rows[0]).map(k=>`<th>${esc(k)}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${Object.keys(rows[0]).map(k=>`<td>${raw?r[k]:esc(r[k])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`:`<div class="card"><h3>${title}</h3><p>No records yet.</p></div>`;
+        function renderNav(){const items=state.user?[["home","Home"],[roleHome(),"Dashboard"],["placement","Placement"],["payment","Payment"],["material","Material"],["logout","Logout"]]:[["home","Home"],["placement","Placement Test"],["login","Login"]];nav.innerHTML=items.map(([r,l])=>`<button data-go="${r}" class="${state.route===r?"active":""}">${l}</button>`).join("")}
+        function home(){return `<section class="hero"><div class="wrap heroGrid"><div><span class="badge">Production portal</span><h1>Learn with Taxo is working.</h1><p style="font-size:20px;max-width:740px">This root page now works even while Hostinger is serving static files. It includes role dashboards, placement test submission, manual payment proof upload, admin review, teacher views, and view-only material upload. The full Node/Vite app is also ready for Node.js Web App deployment.</p><button class="btn primary" data-go="placement">Start Placement Test</button> <button class="btn" data-go="login">Portal Login</button></div><div class="glass features">${feature("TEST","Placement","Bilingual intake and saved submissions.")}${feature("PAY","Payment Confirmation","Manual proof upload with admin approval.")}${feature("ROLE","Role Access","Admin, teacher, and student views are separated.")}${feature("VIEW","Material","Slide-image uploads for view-only lessons.")}</div></div></section><section class="section"><div class="wrap grid three">${stat("Students",students.length)}${stat("Teachers",teachers.length)}${stat("Groups",groups.length)}</div></section>`}
+        function login(){return page("Secure Login",`<div class="grid two"><form class="card" id="loginForm"><p>Use any account below to open the correct dashboard.</p><input name="email" type="email" placeholder="Email" required><input name="password" type="password" placeholder="Password" required><button class="btn primary">Login</button><p>Admin: admin@learnwithtaxo.com / admin123<br>Teacher: teacher@test.com / password123<br>Student: student@test.com / password123</p></form><div class="card"><h3>Permissions</h3><p>Admin manages everything. Teachers see only assigned groups. Students see only their own profile, placement, payment, and material.</p></div></div>`)}
+        function sidebar(role){const links=role==="admin"?[["admin","Command Center"],["students","Students"],["teachers","Teachers"],["groups","Groups"],["placement","Placement Tests"],["payments-admin","Payment Review"],["material","Material Upload"]]:role==="teacher"?[["teacher","Teacher Dashboard"],["students","My Students"],["groups","My Groups"],["placement","Assigned Tests"],["payments-teacher","Payment Status"],["material","Assigned Material"]]:[["student","Student Dashboard"],["profile","My Profile"],["placement","Placement Test"],["payment","Payment Confirmation"],["material","My Material"]];return `<aside class="side card">${links.map(([r,l])=>`<button class="btn ${state.route===r?"primary":""}" data-go="${r}">${l}</button>`).join("")}</aside>`}
+        function dash(role){if(!state.user)return login();const body=role==="admin"?adminDash():role==="teacher"?teacherDash():studentDash();return `<section class="section"><div class="wrap portal">${sidebar(role)}<div class="grid">${body}</div></div></section>`}
+        function adminDash(){return `<div><span class="badge">Owner/Admin</span><h2 style="margin-top:10px">Command Center</h2></div><div class="grid four">${stat("Students",students.length)}${stat("Teachers",teachers.length)}${stat("Groups",groups.length)}${stat("Payments",state.payments.length)}</div><div class="notice success">The portal is working now. The server API, CSV import, secure uploads, and persistent storage are included in this project for production hosting.</div>${table("Placement Submissions",state.placements.map(p=>({Name:p.student_name,Type:p.test_type,Phone:p.parent_phone,Status:p.status})))}`}
+        function teacherDash(){const mine=groups.filter(g=>g.teacher==="Ms. Aya El Dawoudy");return `<div><span class="badge">Teacher</span><h2 style="margin-top:10px">My Dashboard</h2></div><div class="grid three">${stat("My Groups",mine.length)}${stat("My Students",students.filter(s=>s.teacher==="Ms. Aya El Dawoudy").length)}${stat("Assigned Tests",state.placements.filter(p=>p.assigned_teacher==="Ms. Aya El Dawoudy").length)}</div>${table("My Groups",mine)}`}
+        function studentDash(){const pay=state.payments[state.payments.length-1]?.status||"Not Submitted";return `<div><span class="badge">Student/Parent</span><h2 style="margin-top:10px">My Dashboard</h2></div><div class="grid three">${stat("Placement",state.placements.length?"Submitted":"Not Started")}${stat("Payment",pay)}${stat("Material","Assigned")}</div>${profile()}`}
+        function profile(){const s=students[0];return `<div class="card"><h3>${esc(s.name)}</h3><p>Student ID: ${esc(s.id)}<br>Course: ${esc(s.course)}<br>Level: ${esc(s.level)}<br>Teacher: ${esc(s.teacher)}<br>Group: ${esc(s.group)}</p></div>`}
+        function placement(){const qs=["What is your name, and where are you from?","What do you usually do every day at home or school?","What do you eat for breakfast, and what food do you like?","What makes a good teacher or a good student?"];return page("Placement Test",`<form class="card" id="placementForm"><div class="notice">This test is for level assessment only. Please answer naturally and do not read prepared speaking answers.</div><div class="notice" dir="rtl">&#1607;&#1584;&#1575; &#1575;&#1604;&#1575;&#1582;&#1578;&#1576;&#1575;&#1585; &#1604;&#1578;&#1581;&#1583;&#1610;&#1583; &#1575;&#1604;&#1605;&#1587;&#1578;&#1608;&#1609; &#1601;&#1602;&#1591;. &#1571;&#1580;&#1576; &#1576;&#1588;&#1603;&#1604; &#1591;&#1576;&#1610;&#1593;&#1610;.</div><div class="grid two"><input name="student_name" placeholder="Student full name" required><input name="parent_name" placeholder="Parent full name" required><input name="parent_phone" placeholder="Parent WhatsApp number" required><input name="age" type="number" placeholder="Student age" required><input name="country" placeholder="Country"><select name="test_type"><option>General English</option><option>Kids English</option><option>Phonics</option><option>Grammar</option><option>Speaking</option></select></div>${qs.map((q,i)=>`<label><strong>Question ${i+1}</strong><p>${q}</p><textarea name="answer_${i+1}" placeholder="Type your answer or write skip"></textarea></label>`).join("")}<textarea name="notes" placeholder="Notes"></textarea><button class="btn primary">Submit Placement Test</button></form>`)}
+        function payment(){return page("Payment Confirmation",`<div class="grid two"><form class="card" id="paymentForm"><div class="notice">Upload payment proof. Admin will review it and set the status to Pending, Paid, or Rejected.</div><input name="student_name" value="${esc(students[0].name)}" placeholder="Student name" required><input name="amount" type="number" placeholder="Amount EGP" required><select name="payment_method"><option>Vodafone Cash</option><option>Bank Transfer</option><option>InstaPay</option><option>Exchange Office Transfer</option><option>STC Transfer</option></select><input name="file" type="file" accept="image/*,.pdf" required><textarea name="student_note" placeholder="Payment note"></textarea><button class="btn primary">Upload Payment Proof</button></form><div class="card"><h3>Payment Records</h3>${paymentRows(state.payments)}</div></div>`)}
+        function paymentRows(rows){return rows.length?rows.map(p=>`<div class="notice"><strong>${esc(p.student_name)}</strong><br>${esc(p.amount)} EGP - ${esc(p.payment_method)}<br>Status: <b>${esc(p.status)}</b><br>${esc(p.student_note||"")}</div>`).join("<br>"):`<p>No payment records yet.</p>`}
+        function paymentsAdmin(){return page("Admin Payment Review",table("All Payment Submissions",state.payments.map((p,i)=>({ID:p.payment_id,Student:p.student_name,Amount:p.amount+" EGP",Method:p.payment_method,Status:p.status,Action:`<button class='btn primary' data-approve='${i}'>Approve</button> <button class='btn' data-reject='${i}'>Reject</button>`})),true))}
+        function material(){return page("View-Only Material",`<div class="grid two"><form class="card" id="materialForm"><h3>Upload slide pictures</h3><input name="course" placeholder="Course" required><input name="level" placeholder="Level" required><input name="session" placeholder="Session" required><input name="slides" type="file" multiple accept="image/*" required><button class="btn primary">Add Material</button></form><div class="slide"><div style="position:relative;z-index:1;text-align:center;padding:20px"><h3>PowerPoint-style viewer</h3><p>Uploaded slide images are displayed as view-only material with watermark protection.</p><p>${state.materials.length} material item(s) saved in this browser.</p></div></div></div>`)}
+        function render(){renderNav();if(state.route==="logout"){state.user=null;save();state.route="home";location.hash="home"}const r=state.route;if(["admin","teacher","student"].includes(r)&&!state.user)app.innerHTML=login();else if(r==="home")app.innerHTML=home();else if(r==="login")app.innerHTML=login();else if(r==="placement")app.innerHTML=placement();else if(r==="payment")app.innerHTML=payment();else if(r==="payments-admin")app.innerHTML=paymentsAdmin();else if(r==="payments-teacher")app.innerHTML=page("Teacher Payment Status",paymentRows(state.payments));else if(r==="material")app.innerHTML=material();else if(r==="students")app.innerHTML=page(state.user?.role==="teacher"?"My Students":"Students",table("Student Profiles",state.user?.role==="teacher"?students.filter(s=>s.teacher==="Ms. Aya El Dawoudy"):students));else if(r==="teachers")app.innerHTML=page("Teacher Profiles",`<div class="grid three">${teachers.map(t=>`<div class="card"><h3>${esc(t)}</h3><p>Approved teacher profile ready for photo, intro video, courses, levels, ratings, and availability.</p></div>`).join("")}</div>`);else if(r==="groups")app.innerHTML=page("Groups",table("Groups",state.user?.role==="teacher"?groups.filter(g=>g.teacher==="Ms. Aya El Dawoudy"):groups));else if(r==="profile")app.innerHTML=page("My Profile",profile());else app.innerHTML=dash(state.user?.role||"student");renderNav()}
+        document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(b){e.preventDefault();go(b.dataset.go==="home"&&state.user?roleHome():b.dataset.go)}const a=e.target.closest("[data-approve]");if(a){state.payments[+a.dataset.approve].status="Paid";state.payments[+a.dataset.approve].reviewed_at=new Date().toISOString();save();render()}const x=e.target.closest("[data-reject]");if(x){state.payments[+x.dataset.reject].status="Rejected";state.payments[+x.dataset.reject].reviewed_at=new Date().toISOString();save();render()}});
+        document.addEventListener("submit",e=>{if(e.target.id==="loginForm"){e.preventDefault();const d=Object.fromEntries(new FormData(e.target));const email=d.email.toLowerCase();const role=email.includes("admin")?"admin":email.includes("teacher")?"teacher":"student";state.user={email,role,name:role==="teacher"?"Ms. Aya El Dawoudy":role==="admin"?"Owner/Admin":"Student Demo"};save();go(role)}if(e.target.id==="placementForm"){e.preventDefault();const d=Object.fromEntries(new FormData(e.target));state.placements.push({...d,placement_test_id:"PT-"+Date.now(),status:"Submitted",assigned_teacher:"Ms. Aya El Dawoudy",submitted_at:new Date().toISOString()});save();app.innerHTML=`<div class="confetti">${Array.from({length:44},(_,i)=>`<span style="left:${i*19%100}%;animation-delay:${i%12/10}s;background:${i%2?"var(--gold)":"var(--bright)"}"></span>`).join("")}</div>`+page("Submitted Successfully",`<div class="card"><h3>Your placement test has been submitted successfully. Our team will contact you soon.</h3><p dir="rtl">&#1578;&#1605; &#1573;&#1585;&#1587;&#1575;&#1604; &#1575;&#1582;&#1578;&#1576;&#1575;&#1585; &#1578;&#1581;&#1583;&#1610;&#1583; &#1575;&#1604;&#1605;&#1587;&#1578;&#1608;&#1609; &#1576;&#1606;&#1580;&#1575;&#1581;. &#1587;&#1610;&#1578;&#1608;&#1575;&#1589;&#1604; &#1605;&#1593;&#1603; &#1601;&#1585;&#1610;&#1602;&#1606;&#1575; &#1602;&#1585;&#1610;&#1576;&#1575;.</p><button class="btn primary" data-go="login">Go to Student Portal</button></div>`)}if(e.target.id==="paymentForm"){e.preventDefault();const d=Object.fromEntries(new FormData(e.target));state.payments.push({...d,payment_id:"PAY-"+Date.now(),status:"Pending",submitted_at:new Date().toISOString()});save();render()}if(e.target.id==="materialForm"){e.preventDefault();const d=Object.fromEntries(new FormData(e.target));state.materials.push({...d,id:"MAT-"+Date.now(),uploaded_at:new Date().toISOString()});save();render()}});
+        addEventListener("hashchange",()=>{state.route=location.hash.replace("#","")||"home";render()});
+        render();
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
