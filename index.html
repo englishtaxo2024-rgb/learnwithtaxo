@@ -12,11 +12,12 @@
     </style>
   </head>
   <body>
+    <script src="/brand-data.js"></script>
     <div id="root">
       <header class="header">
         <div class="wrap head">
           <button class="brand" data-go="home" type="button">
-            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="if(!this.dataset.triedPublic){this.dataset.triedPublic='1';this.src='/public/assets/logo.png'}else{this.style.display='none';document.querySelector('.warn').style.display='block'}" />
+            <img src="/assets/logo.png" alt="Learn with Taxo logo" onerror="if(!this.dataset.triedPublic){this.dataset.triedPublic='1';this.src='/public/assets/logo.png'}else if(window.TAXO_BRAND_LOGO&&!this.dataset.triedInline){this.dataset.triedInline='1';this.src=window.TAXO_BRAND_LOGO}else{this.style.display='none';document.querySelector('.warn').style.display='block'}" />
             <span class="warn">Official logo missing. Add it to public/assets/logo.png</span>
             <span><strong>LEARN WITH TAXO</strong><span class="tag">Learn to Lead</span><br><span class="ar">&#1575;&#1578;&#1593;&#1604;&#1605; &#1575;&#1604;&#1610;&#1608;&#1605;... &#1608;&#1575;&#1587;&#1576;&#1602; &#1576;&#1603;&#1585;&#1607;</span></span>
           </button>
