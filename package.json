@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "dev:server": "node server/index.js",
-    "build": "vite build",
+    "build": "vite build && node scripts/create-spa-fallback.js",
     "preview": "vite preview",
     "server": "node server/index.js",
     "start": "node server/index.js",
