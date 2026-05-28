@@ -1,0 +1,92 @@
+export const translations = {
+  en: {
+    dir: 'ltr',
+    actions: {
+      startPlacement: 'Start Placement Test',
+      exploreCourses: 'Explore Courses',
+      login: 'Login',
+      logout: 'Logout',
+      continueStudent: 'Continue as Student',
+      continueTeacher: 'Continue as Teacher',
+      continueAdmin: 'Continue as Owner/Admin',
+      save: 'Save',
+      upload: 'Upload',
+      submit: 'Submit',
+      next: 'Next',
+      previous: 'Previous',
+      skip: 'Skip',
+      approve: 'Approve Payment',
+      reject: 'Reject / Request clearer proof',
+      pending: 'Mark Pending',
+      payEasyKash: 'Pay with EasyKash',
+      uploadProof: 'Upload payment proof',
+      transactionReference: 'Enter transaction reference',
+      viewDetails: 'View details'
+    },
+    nav: {
+      home: 'Home', pricing: 'Pricing', howItWorks: 'How it works', dashboard: 'Dashboard', guide: 'Guide', placement: 'Placement', booking: 'Booking', teachers: 'Teachers', payment: 'Payment', profile: 'My Profile', homework: 'Homework', feedback: 'Feedback', finalTest: 'Final Test', reports: 'Reports', certificate: 'Certificate', chat: 'Chat', availability: 'Availability', schedule: 'Schedule', material: 'Assigned Material', attendance: 'Attendance', students: 'Students', salary: 'Salary', vacation: 'Vacation', finance: 'Finance', prices: 'Prices', tests: 'Tests', roles: 'Roles', blocked: 'Blocked Users', automation: 'Automation', audit: 'Audit Log', dataSources: 'Data Sources', assets: 'Assets', currentSessions: 'Current Sessions', placementCodes: 'Placement Codes', manualAdd: 'Manual Add'
+    },
+    home: {
+      title: 'Premium English learning from placement to certificate.',
+      subtitle: 'Start with a smart placement test, choose the right course, book your suitable group or private class, and follow your progress step by step until your certificate.',
+      services: 'Our Services', servicesAr: 'خدماتنا', paths: 'Choose Your Learning Path', pathsAr: 'اختر رحلتك التعليمية', trust: 'Clear steps, friendly teachers, and organized progress for every family.'
+    },
+    login: { title: 'Choose your portal', subtitle: 'Enter the right area for your learning role.', student: 'Student / Parent Login', teacher: 'Teacher Login', admin: 'Owner/Admin Login' },
+    services: {
+      placement: ['Placement Test', 'Find the right level before booking.'],
+      general: ['General English', 'Improve speaking, grammar, listening, reading, writing, and confidence.'],
+      kids: ['Kids English', 'Fun English lessons with vocabulary, stories, speaking, games, and certificates.'],
+      phonics: ['Phonics', 'Build strong reading, spelling, pronunciation, and writing foundations.'],
+      private: ['Private Classes', 'One-to-one lessons with a personalized learning plan.']
+    },
+    dashboards: {
+      studentTitle: 'Welcome to your learning journey.',
+      studentText: 'Here you can view your schedule, homework, results, reports, certificates, and next steps.',
+      teacherTitle: 'Manage your classes from one place.',
+      teacherText: 'Manage your classes, attendance, homework submissions, student feedback, materials, and salary updates from one place.',
+      adminTitle: 'Learn with Taxo command center.',
+      adminText: 'Manage students, teachers, bookings, payments, schedules, materials, tests, reports, certificates, and quality follow-up.'
+    },
+    payment: {
+      title: 'Payment Confirmation',
+      intro: 'Choose your plan, pay safely through EasyKash, then upload your receipt or transaction reference for review. Your booking is confirmed after payment approval.',
+      flow: ['Plan selected', 'EasyKash Payment Link opens', 'Student pays', 'Student uploads proof or transaction reference', 'Admin approves', 'Booking confirmed inside Learn with Taxo']
+    },
+    placement: { title: 'Placement Test', intro: 'Find the right level before booking. Answer what you know and skip what you do not know.', alphabet: 'Do you already know the English alphabet?', success: 'Your placement test has been submitted successfully. Our team will contact you soon.' },
+    pages: {
+      studentGuide: 'A simple guide for your first steps, class rules, schedule, homework, feedback, and certificates.', booking: 'Choose the course, group or private class, and the plan that fits your level.', studentFeedback: 'Rate your latest session in a fast, friendly form.', teacherFeedback: 'Review feedback received from your own students and groups.', homework: 'View homework after each session and upload your answers.', reports: 'Follow reports and recommendations after each learning stage.', certificate: 'View your eligible certificates after completing the requirements.', chat: 'Use your internal group chat with the teacher and support team.', finalTest: 'Your final test opens after the final attended session.', dataSourcesNote: 'Permission required. Share the sheet with the backend/service account or upload CSV/XLSX.'
+    }
+  },
+  ar: {
+    dir: 'rtl',
+    actions: {
+      startPlacement: 'ابدأ اختبار تحديد المستوى', exploreCourses: 'تصفح الكورسات', login: 'تسجيل الدخول', logout: 'تسجيل الخروج', continueStudent: 'الدخول كطالب / ولي أمر', continueTeacher: 'الدخول كمعلمة', continueAdmin: 'الدخول كإدارة', save: 'حفظ', upload: 'رفع', submit: 'إرسال', next: 'التالي', previous: 'السابق', skip: 'تخطي', approve: 'الموافقة على الدفع', reject: 'رفض / طلب إيصال أوضح', pending: 'تحت المراجعة', payEasyKash: 'الدفع من خلال EasyKash', uploadProof: 'رفع إثبات الدفع', transactionReference: 'إدخال رقم العملية', viewDetails: 'عرض التفاصيل'
+    },
+    nav: {
+      home: 'الرئيسية', pricing: 'الأسعار', howItWorks: 'طريقة العمل', dashboard: 'لوحة التحكم', guide: 'الدليل', placement: 'تحديد المستوى', booking: 'الحجز', teachers: 'المعلمات', payment: 'الدفع', profile: 'ملفي', homework: 'الواجب', feedback: 'التقييم', finalTest: 'الاختبار النهائي', reports: 'التقارير', certificate: 'الشهادة', chat: 'المحادثة', availability: 'المواعيد', schedule: 'الجدول', material: 'المواد المخصصة', attendance: 'الحضور', students: 'الطلاب', salary: 'المستحقات', vacation: 'الإجازة', finance: 'المالية', prices: 'الأسعار', tests: 'الاختبارات', roles: 'الصلاحيات', blocked: 'المحظورون', automation: 'الأتمتة', audit: 'سجل المتابعة', dataSources: 'مصادر البيانات', assets: 'الأصول', currentSessions: 'الحصص الحالية', placementCodes: 'أكواد المستوى', manualAdd: 'إضافة طالب'
+    },
+    home: {
+      title: 'تعلم إنجليزي بريميوم من تحديد المستوى حتى الشهادة.',
+      subtitle: 'ابدأ باختبار تحديد مستوى ذكي، اختر الكورس المناسب، احجز المجموعة أو الحصة الخاصة المناسبة لك، وتابع تقدمك خطوة بخطوة حتى الشهادة.',
+      services: 'خدماتنا', servicesAr: 'Our Services', paths: 'اختر رحلتك التعليمية', pathsAr: 'Choose Your Learning Path', trust: 'خطوات واضحة، معلمات ودودات، ومتابعة منظمة لكل أسرة.'
+    },
+    login: { title: 'اختر البوابة المناسبة', subtitle: 'ادخل إلى المساحة المناسبة لدورك في رحلة التعلم.', student: 'دخول الطالب / ولي الأمر', teacher: 'دخول المعلمة', admin: 'دخول الإدارة' },
+    services: {
+      placement: ['اختبار تحديد المستوى', 'اعرف مستواك المناسب قبل الحجز.'],
+      general: ['الإنجليزي العام', 'طوّر المحادثة والجرامر والاستماع والقراءة والكتابة والثقة.'],
+      kids: ['إنجليزي الأطفال', 'حصص ممتعة للأطفال تشمل كلمات وقصص ومحادثة وألعاب وشهادات.'],
+      phonics: ['فونكس', 'تأسيس قوي في القراءة والإملاء والنطق والكتابة.'],
+      private: ['حصص خاصة', 'حصص فردية بخطة تعليمية مخصصة.']
+    },
+    dashboards: {
+      studentTitle: 'مرحباً بك في رحلتك التعليمية.', studentText: 'يمكنك هنا متابعة جدولك، واجباتك، نتائجك، تقاريرك، شهاداتك، والخطوات القادمة.', teacherTitle: 'تابعي حصصك من مكان واحد.', teacherText: 'تابعي حصصك، الحضور، الواجبات، تقييمات الطلاب، المواد، وتحديثات المستحقات من مكان واحد.', adminTitle: 'مركز إدارة Learn with Taxo.', adminText: 'إدارة الطلاب، المدرسين، الحجوزات، المدفوعات، الجداول، المواد، الاختبارات، التقارير، الشهادات، ومتابعة الجودة.'
+    },
+    payment: {
+      title: 'تأكيد الدفع', intro: 'اختر خطتك، ادفع بأمان من خلال EasyKash، ثم ارفع صورة الإيصال أو رقم العملية للمراجعة. يتم تأكيد الحجز بعد الموافقة على الدفع.', flow: ['اختيار الخطة', 'فتح رابط EasyKash', 'إتمام الدفع', 'رفع الإيصال أو رقم العملية', 'مراجعة الإدارة', 'تأكيد الحجز داخل Learn with Taxo']
+    },
+    placement: { title: 'اختبار تحديد المستوى', intro: 'اعرف مستواك المناسب قبل الحجز. أجب عما تعرفه وتخط ما لا تعرفه.', alphabet: 'هل تعرف حروف اللغة الإنجليزية؟', success: 'تم إرسال اختبار تحديد المستوى بنجاح. سيتواصل معك فريقنا قريباً.' },
+    pages: {
+      studentGuide: 'دليل بسيط لأول خطواتك، قواعد الحصة، الجدول، الواجب، التقييم، والشهادات.', booking: 'اختر الكورس، المجموعة أو الحصة الخاصة، والخطة المناسبة لمستواك.', studentFeedback: 'قيّم آخر حصة بطريقة سريعة وبسيطة.', teacherFeedback: 'راجعي تقييمات طلابك ومجموعاتك فقط.', homework: 'تابع الواجب بعد كل حصة وارفع إجاباتك.', reports: 'تابع التقارير والتوصيات بعد كل مرحلة.', certificate: 'اعرض الشهادات المتاحة بعد إكمال المتطلبات.', chat: 'استخدم محادثة مجموعتك الداخلية مع المعلمة وفريق الدعم.', finalTest: 'يفتح الاختبار النهائي بعد حضور آخر حصة.', dataSourcesNote: 'Permission required. Share the sheet with the backend/service account or upload CSV/XLSX.'
+    }
+  }
+};
