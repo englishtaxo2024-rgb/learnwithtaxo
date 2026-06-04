@@ -1,41 +1,45 @@
-const asset = (_src, alt) => ({ src: '', alt });
+const generalPath = '/assets/visuals/general';
+const kidsPhonicsPath = '/assets/visuals/kids-phonics';
+const kidsCoursePath = '/assets/visuals/kids-course';
+
+const asset = (src, alt) => ({ src, alt });
 
 export const visualAssets = {
   general: {
-    heroStudentLearning: asset('', 'Premium Learn with Taxo online English learning journey'),
-    placementSpeakingTest: asset('', 'Online placement speaking test with advisor support'),
-    onlineTeacherClass: asset('', 'Live online English class with teacher and student'),
-    adminDashboardManagement: asset('', 'Premium admin dashboard for school management'),
-    paymentConfirmation: asset('', 'Secure payment confirmation'),
-    materialsLibrary: asset('', 'Digital learning materials library'),
-    familyScheduleGroup: asset('', 'Family schedule and group placement portal'),
-    supportAdvisor: asset('', 'Student support advisor for learning journey'),
-    englishStudyProgress: asset('', 'English study progress dashboard'),
-    studentAchievement: asset('', 'Student achievement and certificate success')
+    heroStudentLearning: asset(`${generalPath}/hero-student-learning.png`, 'Premium Learn with Taxo online English learning journey'),
+    placementSpeakingTest: asset(`${generalPath}/placement-speaking-test.png`, 'Online placement speaking test with advisor support'),
+    onlineTeacherClass: asset(`${generalPath}/online-teacher-class.png`, 'Live online English class with teacher and student'),
+    adminDashboardManagement: asset(`${generalPath}/admin-dashboard-management.png`, 'Premium admin dashboard for school management'),
+    paymentConfirmation: asset(`${generalPath}/payment-confirmation.png`, 'Secure payment confirmation'),
+    materialsLibrary: asset(`${generalPath}/materials-library.png`, 'Digital learning materials library'),
+    familyScheduleGroup: asset(`${generalPath}/family-schedule-group.png`, 'Family schedule and group placement portal'),
+    supportAdvisor: asset(`${generalPath}/support-advisor.png`, 'Student support advisor for learning journey'),
+    englishStudyProgress: asset(`${generalPath}/english-study-progress.png`, 'English study progress dashboard'),
+    studentAchievement: asset(`${generalPath}/student-achievement.png`, 'Student achievement and certificate success')
   },
   kidsPhonics: {
-    familyTable: asset('', 'Family phonics learning at home'),
-    abcTablet: asset('', 'Phonics alphabet recognition on tablet'),
-    tracingTablet: asset('', 'Child tracing phonics letters on tablet'),
-    cvcTiles: asset('', 'CVC word tiles for phonics blending'),
-    readingCorner: asset('', 'Phonics reading practice corner'),
-    onlineClass: asset('', 'Live online phonics class'),
-    parentChild: asset('', 'Parent supporting child phonics practice'),
-    progressSuccess: asset('', 'Phonics progress and success dashboard'),
-    pronunciation: asset('', 'Phonics pronunciation and sound practice'),
-    gameBoard: asset('', 'Phonics game board for word building')
+    familyTable: asset(`${kidsPhonicsPath}/phonics-family-table.png`, 'Family phonics learning at home'),
+    abcTablet: asset(`${kidsPhonicsPath}/phonics-abc-tablet.png`, 'Phonics alphabet recognition on tablet'),
+    tracingTablet: asset(`${kidsPhonicsPath}/phonics-tracing-tablet.png`, 'Child tracing phonics letters on tablet'),
+    cvcTiles: asset(`${kidsPhonicsPath}/phonics-cvc-tiles.png`, 'CVC word tiles for phonics blending'),
+    readingCorner: asset(`${kidsPhonicsPath}/phonics-reading-corner.png`, 'Phonics reading practice corner'),
+    onlineClass: asset(`${kidsPhonicsPath}/phonics-online-class.png`, 'Live online phonics class'),
+    parentChild: asset(`${kidsPhonicsPath}/phonics-parent-child.png`, 'Parent supporting child phonics practice'),
+    progressSuccess: asset(`${kidsPhonicsPath}/phonics-progress-success.png`, 'Phonics progress and success dashboard'),
+    pronunciation: asset(`${kidsPhonicsPath}/phonics-pronunciation.png`, 'Phonics pronunciation and sound practice'),
+    gameBoard: asset(`${kidsPhonicsPath}/phonics-game-board.png`, 'Phonics game board for word building')
   },
   kidsCourse: {
-    speakingLesson: asset('', 'Kids English speaking lesson'),
-    countingLesson: asset('', 'Kids English counting lesson'),
-    colorsShapes: asset('', 'Kids English colors and shapes lesson'),
-    storytimeReading: asset('', 'Kids English storytime reading lesson'),
-    greetingsSpeaking: asset('', 'Kids English greetings and speaking practice'),
-    sentenceBuilding: asset('', 'Kids English sentence building practice'),
-    animalsNature: asset('', 'Kids English animals and nature vocabulary'),
-    onlineClass: asset('', 'Kids English live online class'),
-    teamGame: asset('', 'Kids English team game and rewards'),
-    achievementCertificates: asset('', 'Kids English achievement certificates')
+    speakingLesson: asset(`${kidsCoursePath}/kids-speaking-lesson.png`, 'Kids English speaking lesson'),
+    countingLesson: asset(`${kidsCoursePath}/kids-counting-lesson.png`, 'Kids English counting lesson'),
+    colorsShapes: asset(`${kidsCoursePath}/kids-colors-shapes.png`, 'Kids English colors and shapes lesson'),
+    storytimeReading: asset(`${kidsCoursePath}/kids-storytime-reading.png`, 'Kids English storytime reading lesson'),
+    greetingsSpeaking: asset(`${kidsCoursePath}/kids-greetings-speaking.png`, 'Kids English greetings and speaking practice'),
+    sentenceBuilding: asset(`${kidsCoursePath}/kids-sentence-building.png`, 'Kids English sentence building practice'),
+    animalsNature: asset(`${kidsCoursePath}/kids-animals-nature.png`, 'Kids English animals and nature vocabulary'),
+    onlineClass: asset(`${kidsCoursePath}/kids-online-class.png`, 'Kids English live online class'),
+    teamGame: asset(`${kidsCoursePath}/kids-team-game.png`, 'Kids English team game and rewards'),
+    achievementCertificates: asset(`${kidsCoursePath}/kids-achievement-certificates.png`, 'Kids English achievement certificates')
   }
 };
 
@@ -81,11 +85,7 @@ export const learningPathVisuals = [
 export function getCourseVisual(courseName = '') {
   const value = String(courseName).toLowerCase();
   if (value.includes('phonics')) return visualAssets.kidsPhonics.progressSuccess;
-  if (value.includes('kids') || value.includes('a0') || value.includes('a1') || value.includes('a2')) {
-    return visualAssets.kidsCourse.achievementCertificates;
-  }
-  if (value.includes('general') || value.includes('adult') || value.includes('speaking') || value.includes('grammar')) {
-    return visualAssets.general.englishStudyProgress;
-  }
+  if (value.includes('kids') || value.includes('a0') || value.includes('a1') || value.includes('a2')) return visualAssets.kidsCourse.achievementCertificates;
+  if (value.includes('general') || value.includes('adult') || value.includes('speaking') || value.includes('grammar')) return visualAssets.general.englishStudyProgress;
   return visualAssets.general.heroStudentLearning;
 }
