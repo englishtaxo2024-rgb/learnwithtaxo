@@ -4,6 +4,6 @@ export const brand = {
   tagline: 'Learn to Lead',
   arabicTagline: 'اتعلم اليوم... واسبق بكره',
   domain: 'https://www.learnwithtaxo.com',
-  logoPath: '/assets/logo.png',
+  logoPath: '/assets/no',
   ownerEmail: 'sagafinearts@gmail.com'
 };
