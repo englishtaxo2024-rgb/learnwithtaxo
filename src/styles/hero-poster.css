@@ -1,27 +1,121 @@
-.hero-logo-inner {
-  aspect-ratio: 3 / 4;
+.brand-logo-mark {
+  width: 94px !important;
+  height: 94px !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  border: 3px solid rgba(212, 175, 55, .78) !important;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .28), inset 0 0 0 6px #fff !important;
   overflow: hidden !important;
-  padding: 0 !important;
+  flex: 0 0 auto !important;
 }
 
-.hero-logo-inner img {
+.brand-logo-mark img {
+  width: 82% !important;
+  height: 82% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+}
+
+.hero-logo-card {
+  padding: clamp(1rem, 2vw, 1.35rem) !important;
+}
+
+.hero-logo-inner {
+  min-height: clamp(560px, 58vw, 760px) !important;
+  aspect-ratio: 3 / 4 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  border: 1px solid rgba(212, 175, 55, .45) !important;
+}
+
+.hero-logo-inner img,
+.hero-logo-inner .safe-image-fallback {
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
   object-fit: cover !important;
-  object-position: center center;
-  display: block;
+  object-position: center center !important;
+  display: block !important;
 }
 
-.hero-logo-inner .safe-image-fallback {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100%;
+.hero-title {
+  font-size: clamp(3.1rem, 5.2vw, 5.8rem) !important;
+  line-height: 1.02 !important;
 }
 
-@media (max-width: 700px) {
+.hero-subtitle,
+.hero-subtitle-ar {
+  color: #EAF6FC !important;
+  font-size: clamp(1.12rem, 1.4vw, 1.28rem) !important;
+  font-weight: 800 !important;
+}
+
+.section-copy,
+.visual-course p,
+.service-card p,
+.card p,
+.table-shell td,
+.question-helper,
+.speaking-note {
+  color: #061B30 !important;
+  font-size: clamp(1.12rem, 1.4vw, 1.28rem) !important;
+  font-weight: 750 !important;
+}
+
+.service-card h3,
+.visual-course h3,
+.card h2,
+.card h3,
+.portal-hero h1,
+.placement-card h2 {
+  color: #061B30 !important;
+  font-weight: 950 !important;
+}
+
+.service-image,
+.visual-course > img,
+.feature-image,
+.visual-tile img,
+.portal-hero-image,
+.success-card img {
+  min-height: 220px !important;
+  background: #EAF6FC !important;
+}
+
+.safe-image-fallback {
+  color: #061B30 !important;
+}
+
+.placement-card {
+  font-size: 1.12rem !important;
+}
+
+.placement-controls audio {
+  width: min(100%, 420px) !important;
+}
+
+@media (max-width: 920px) {
   .hero-logo-inner {
-    aspect-ratio: 4 / 5;
+    min-height: 500px !important;
+    width: min(100%, 430px) !important;
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-logo-mark {
+    width: 78px !important;
+    height: 78px !important;
+  }
+
+  .hero-logo-inner {
+    min-height: 420px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 12vw, 3.6rem) !important;
   }
 }
