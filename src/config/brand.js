@@ -5,7 +5,7 @@ export const brand = {
   arabicTagline: 'اتعلم اليوم... واسبق بكره',
   domain: 'https://www.learnwithtaxo.com',
   logoPath: '/assets/logo.png',
-  fullLogoPath: '/assets/hero-brand-poster.svg',
+  fullLogoPath: '/assets/hero-brand-poster-photo.jpg',
   logoSymbolPath: '/assets/no2',
   ownerEmail: 'sagafinearts@gmail.com'
 };
