@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "dev:server": "node server/index.js",
-    "build": "node scripts/restore-hero-image.js && vite build && node scripts/create-spa-fallback.js",
+    "build": "vite build && node scripts/create-spa-fallback.js",
     "preview": "vite preview",
     "server": "node server/index.js",
     "start": "node server/index.js",
