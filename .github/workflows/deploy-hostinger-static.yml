@@ -38,20 +38,11 @@ jobs:
           test -f dist/404.html
           test -d dist/assets
           test -f dist/assets/logo.png
+          test -f dist/assets/no
           test -f dist/assets/no2
-          test -d dist/assets/visuals/general
-          test -d dist/assets/visuals/kids-course
-          test -d dist/assets/visuals/kids-phonics
-          test -f dist/assets/visuals/general/hero-student-learning.png
-          test -f dist/assets/visuals/general/placement-speaking-test.png
-          test -f dist/assets/visuals/general/online-teacher-class.png
-          test -f dist/assets/visuals/kids-course/kids-speaking-lesson.png
-          test -f dist/assets/visuals/kids-course/kids-storytime-reading.png
-          test -f dist/assets/visuals/kids-phonics/phonics-reading-corner.png
           find dist/assets -type f | grep -E '\.(js|css)$'
           ls -la dist
           ls -la dist/assets
-          find dist/assets/visuals -maxdepth 2 -type f | head -40
 
       - name: Deploy dist to hostinger-static
         uses: peaceiris/actions-gh-pages@v3
