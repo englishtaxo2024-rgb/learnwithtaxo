@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1536" role="img" aria-labelledby="title desc">
+  <title id="title">Learn with Taxo premium learning poster</title>
+  <desc id="desc">Premium navy and gold Learn with Taxo poster with official mark, learning message, open book, and achievement symbols.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="58%" r="60%">
+      <stop offset="0" stop-color="#245F97" stop-opacity="0.42"/>
+      <stop offset="0.48" stop-color="#0B2A4A" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#061B30"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2D875"/>
+      <stop offset="0.5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#A77B18"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#35A0D5"/>
+      <stop offset="0.45" stop-color="#0075D6"/>
+      <stop offset="1" stop-color="#061B30"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.48"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1536" fill="url(#glow)"/>
+  <rect x="28" y="28" width="1024" height="1480" rx="46" fill="none" stroke="url(#gold)" stroke-width="5" opacity="0.8"/>
+  <rect x="48" y="48" width="984" height="1440" rx="34" fill="none" stroke="#C3E1F5" stroke-width="1" opacity="0.14"/>
+
+  <g opacity="0.42" stroke="url(#gold)" stroke-width="2" fill="none">
+    <path d="M790 102 C855 72 919 70 986 102 L914 132 L790 102Z"/>
+    <path d="M853 132 V180"/>
+    <circle cx="853" cy="194" r="10"/>
+    <circle cx="932" cy="218" r="92"/>
+    <path d="M840 218 H1024 M932 126 C905 170 905 266 932 310 M932 126 C959 170 959 266 932 310"/>
+  </g>
+
+  <g transform="translate(82 92)" filter="url(#shadow)">
+    <image href="/assets/no2" x="0" y="0" width="330" height="440" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <g transform="translate(388 260)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="900" fill="#FFFFFF" filter="url(#shadow)">Learn with <tspan fill="#35A0D5">Tax</tspan><tspan fill="#D4AF37">o</tspan></text>
+    <text x="125" y="88" font-family="Inter, Arial, sans-serif" font-size="42" letter-spacing="10" fill="url(#gold)">Learn to Lead</text>
+    <line x1="58" y1="72" x2="112" y2="72" stroke="url(#gold)" stroke-width="5"/>
+    <line x1="520" y1="72" x2="600" y2="72" stroke="url(#gold)" stroke-width="5"/>
+    <text x="72" y="162" font-family="Tahoma, Arial, sans-serif" font-size="39" fill="#FFFFFF" direction="rtl">اتعلم اليوم... واسبق بكره.</text>
+  </g>
+
+  <g text-anchor="middle" font-family="Inter, Arial, sans-serif">
+    <text x="540" y="700" font-size="43" fill="url(#gold)">Knowledge is the first step,</text>
+    <text x="540" y="758" font-size="43" fill="url(#gold)">leadership is the destination.</text>
+    <text x="540" y="824" font-size="47" font-style="italic" font-weight="800" fill="#F2D875">Lead the future.</text>
+  </g>
+
+  <g transform="translate(280 900)" filter="url(#softGlow)">
+    <path d="M40 316 C132 244 224 220 350 222 C474 220 560 244 650 316" fill="none" stroke="url(#gold)" stroke-width="11" opacity="0.78"/>
+    <path d="M350 222 C338 160 352 98 410 36 C426 104 470 152 550 180 C470 206 418 248 388 316 C378 268 366 238 350 222Z" fill="url(#gold)" opacity="0.95"/>
+    <path d="M84 320 C150 258 242 244 348 278 L348 388 C236 344 150 344 84 402Z" fill="#EAF6FC" stroke="#D4AF37" stroke-width="5"/>
+    <path d="M348 278 C454 244 546 258 612 320 L612 402 C546 344 460 344 348 388Z" fill="#FFFFFF" stroke="#D4AF37" stroke-width="5"/>
+    <line x1="348" y1="278" x2="348" y2="388" stroke="#A77B18" stroke-width="4"/>
+  </g>
+
+  <g transform="translate(110 1045)">
+    <rect x="0" y="0" width="280" height="70" rx="10" fill="#0B2A4A" stroke="#D4AF37"/>
+    <text x="26" y="45" font-family="Georgia, serif" font-size="31" fill="#D4AF37">KNOWLEDGE</text>
+    <rect x="0" y="80" width="280" height="70" rx="10" fill="#0B2A4A" stroke="#D4AF37"/>
+    <text x="26" y="125" font-family="Georgia, serif" font-size="31" fill="#D4AF37">SKILLS</text>
+    <rect x="0" y="160" width="280" height="70" rx="10" fill="#0B2A4A" stroke="#D4AF37"/>
+    <text x="26" y="205" font-family="Georgia, serif" font-size="31" fill="#D4AF37">LEADERSHIP</text>
+  </g>
+
+  <g transform="translate(784 1032)">
+    <rect x="0" y="0" width="178" height="260" rx="16" fill="#071F37" stroke="#D4AF37" stroke-width="4"/>
+    <text x="89" y="76" text-anchor="middle" font-family="Georgia, serif" font-size="31" fill="#D4AF37">EDUCATE</text>
+    <text x="89" y="138" text-anchor="middle" font-family="Georgia, serif" font-size="31" fill="#D4AF37">EMPOWER</text>
+    <text x="89" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="31" fill="#D4AF37">ELEVATE</text>
+  </g>
+
+  <g transform="translate(126 1364)" font-family="Inter, Arial, sans-serif" fill="#FFFFFF">
+    <g>
+      <rect x="0" y="0" width="56" height="56" rx="12" fill="none" stroke="#D4AF37" stroke-width="4"/>
+      <path d="M14 18 H27 C35 18 42 24 42 32 V42 H14 Z" fill="none" stroke="#D4AF37" stroke-width="4"/>
+      <text x="76" y="25" font-size="24" font-weight="800">Learn</text>
+      <text x="76" y="54" font-size="22">with Purpose</text>
+    </g>
+    <line x1="322" y1="2" x2="322" y2="58" stroke="#D4AF37" opacity="0.45"/>
+    <g transform="translate(388 0)">
+      <circle cx="28" cy="18" r="15" fill="url(#gold)"/>
+      <path d="M10 52 C12 34 44 34 48 52" fill="url(#gold)"/>
+      <text x="76" y="25" font-size="24" font-weight="800">Grow</text>
+      <text x="76" y="54" font-size="22">with Discipline</text>
+    </g>
+    <line x1="710" y1="2" x2="710" y2="58" stroke="#D4AF37" opacity="0.45"/>
+    <g transform="translate(768 0)">
+      <path d="M10 10 H50 V24 C50 42 38 54 30 54 C22 54 10 42 10 24 Z" fill="none" stroke="#D4AF37" stroke-width="5"/>
+      <text x="76" y="25" font-size="24" font-weight="800">Lead</text>
+      <text x="76" y="54" font-size="22">with Impact</text>
+    </g>
+  </g>
+
+  <text x="540" y="1470" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#D4AF37">Your Journey. Your Future. Our Mission.</text>
+</svg>
