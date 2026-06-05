@@ -1,0 +1,27 @@
+.hero-logo-inner {
+  aspect-ratio: 3 / 4;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+.hero-logo-inner img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center;
+  display: block;
+}
+
+.hero-logo-inner .safe-image-fallback {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100%;
+}
+
+@media (max-width: 700px) {
+  .hero-logo-inner {
+    aspect-ratio: 4 / 5;
+  }
+}
