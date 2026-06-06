@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - scripts/apply-hostinger-image-paths.mjs
+      - scripts/run-hostinger-image-migration.mjs
       - .github/workflows/apply-hostinger-image-paths.yml
   workflow_dispatch:
 
@@ -31,8 +32,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Apply Hostinger image paths
-        run: node scripts/apply-hostinger-image-paths.mjs
+      - name: Apply and verify Hostinger image paths
+        run: node scripts/run-hostinger-image-migration.mjs
 
       - name: Commit source updates
         run: |
