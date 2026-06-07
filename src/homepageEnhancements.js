@@ -1,15 +1,38 @@
-const SERVICES_IMAGE = '/assets/services/student-services-5-cards.png';
-const LIVE_MOMENTS_IMAGE = '/assets/live-sessions/live-class-moments.png';
-const FEEDBACK_IMAGES = Array.from(
-  { length: 20 },
-  (_, index) => `/assets/feedback/feedback-${String(index + 1).padStart(2, '0')}.png`,
-);
+const CACHE_VERSION = '20260607';
+const SERVICES_IMAGE = `/assets/services/student-services-5-cards.png?v=${CACHE_VERSION}`;
+const LIVE_MOMENTS_IMAGE = `/assets/live-sessions/live-class-moments.png?v=${CACHE_VERSION}`;
+const FEEDBACK_IMAGES = [
+  '/assets/feedback/feedback-01.png?v=20260607',
+  '/assets/feedback/feedback-02.png?v=20260607',
+  '/assets/feedback/feedback-03.png?v=20260607',
+  '/assets/feedback/feedback-04.png?v=20260607',
+  '/assets/feedback/feedback-05.png?v=20260607',
+  '/assets/feedback/feedback-06.png?v=20260607',
+  '/assets/feedback/feedback-07.png?v=20260607',
+  '/assets/feedback/feedback-08.png?v=20260607',
+  '/assets/feedback/feedback-09.png?v=20260607',
+  '/assets/feedback/feedback-10.png?v=20260607',
+  '/assets/feedback/feedback-11.png?v=20260607',
+  '/assets/feedback/feedback-12.png?v=20260607',
+  '/assets/feedback/feedback-13.png?v=20260607',
+  '/assets/feedback/feedback-14.png?v=20260607',
+  '/assets/feedback/feedback-15.png?v=20260607',
+  '/assets/feedback/feedback-16.png?v=20260607',
+  '/assets/feedback/feedback-17.png?v=20260607',
+  '/assets/feedback/feedback-18.png?v=20260607',
+  '/assets/feedback/feedback-19.png?v=20260607',
+  '/assets/feedback/feedback-20.png?v=20260607',
+];
 
 function createImage(src, alt, className) {
+  if (!src || !src.startsWith('/assets/')) {
+    throw new Error('A valid absolute asset path is required.');
+  }
+
   const image = document.createElement('img');
-  image.src = src;
-  image.alt = alt;
-  image.className = className;
+  image.setAttribute('src', src);
+  image.setAttribute('alt', alt);
+  if (className) image.className = className;
   return image;
 }
 
