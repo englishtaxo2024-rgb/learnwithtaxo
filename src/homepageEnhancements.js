@@ -1,27 +1,27 @@
-const CACHE_VERSION = '20260607';
+const CACHE_VERSION = '20260607b';
 const SERVICES_IMAGE = `/assets/services/student-services-5-cards.png?v=${CACHE_VERSION}`;
 const LIVE_MOMENTS_IMAGE = `/assets/live-sessions/live-class-moments.png?v=${CACHE_VERSION}`;
 const FEEDBACK_IMAGES = [
-  '/assets/feedback/feedback-01.png?v=20260607',
-  '/assets/feedback/feedback-02.png?v=20260607',
-  '/assets/feedback/feedback-03.png?v=20260607',
-  '/assets/feedback/feedback-04.png?v=20260607',
-  '/assets/feedback/feedback-05.png?v=20260607',
-  '/assets/feedback/feedback-06.png?v=20260607',
-  '/assets/feedback/feedback-07.png?v=20260607',
-  '/assets/feedback/feedback-08.png?v=20260607',
-  '/assets/feedback/feedback-09.png?v=20260607',
-  '/assets/feedback/feedback-10.png?v=20260607',
-  '/assets/feedback/feedback-11.png?v=20260607',
-  '/assets/feedback/feedback-12.png?v=20260607',
-  '/assets/feedback/feedback-13.png?v=20260607',
-  '/assets/feedback/feedback-14.png?v=20260607',
-  '/assets/feedback/feedback-15.png?v=20260607',
-  '/assets/feedback/feedback-16.png?v=20260607',
-  '/assets/feedback/feedback-17.png?v=20260607',
-  '/assets/feedback/feedback-18.png?v=20260607',
-  '/assets/feedback/feedback-19.png?v=20260607',
-  '/assets/feedback/feedback-20.png?v=20260607',
+  '/assets/feedback/feedback-01.png?v=20260607b',
+  '/assets/feedback/feedback-02.png?v=20260607b',
+  '/assets/feedback/feedback-03.png?v=20260607b',
+  '/assets/feedback/feedback-04.png?v=20260607b',
+  '/assets/feedback/feedback-05.png?v=20260607b',
+  '/assets/feedback/feedback-06.png?v=20260607b',
+  '/assets/feedback/feedback-07.png?v=20260607b',
+  '/assets/feedback/feedback-08.png?v=20260607b',
+  '/assets/feedback/feedback-09.png?v=20260607b',
+  '/assets/feedback/feedback-10.png?v=20260607b',
+  '/assets/feedback/feedback-11.png?v=20260607b',
+  '/assets/feedback/feedback-12.png?v=20260607b',
+  '/assets/feedback/feedback-13.png?v=20260607b',
+  '/assets/feedback/feedback-14.png?v=20260607b',
+  '/assets/feedback/feedback-15.png?v=20260607b',
+  '/assets/feedback/feedback-16.png?v=20260607b',
+  '/assets/feedback/feedback-17.png?v=20260607b',
+  '/assets/feedback/feedback-18.png?v=20260607b',
+  '/assets/feedback/feedback-19.png?v=20260607b',
+  '/assets/feedback/feedback-20.png?v=20260607b',
 ];
 
 function createImage(src, alt, className) {
