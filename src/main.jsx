@@ -5,6 +5,7 @@ import App from './App.jsx';
 import { LanguageProvider } from './i18n/LanguageProvider.jsx';
 import { installHomepageEnhancements } from './homepageEnhancements.js';
 import './styles/index.css';
+import './styles/homepage-enhancements.css';
 import './styles/hero-poster.css';
 
 installHomepageEnhancements();
