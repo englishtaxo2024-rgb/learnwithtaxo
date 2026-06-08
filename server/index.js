@@ -13,6 +13,7 @@ import aiRoutes from './routes/ai.js';
 import { getDataSourceStatus } from './services/googleSheetsServer.js';
 import authRoutes from './routes/auth.js';
 import recordsRoutes from './routes/records.js';
+import placementRoutes from './routes/placement.js';
 
 const app = express();
 const port = process.env.PORT || 8787;
@@ -27,6 +28,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'learn-with-taxo-api' }));
 app.use('/api/auth', authRoutes);
+app.use('/api/placement', placementRoutes);
 app.use('/api/records', recordsRoutes);
 app.use('/api/google-sheets', googleSheetsRoutes);
 app.get('/api/data-sources/status', async (_req, res) => res.json(await getDataSourceStatus()));
