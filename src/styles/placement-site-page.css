@@ -1,0 +1,130 @@
+.placement-site-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #eef7fc;
+}
+
+.placement-public-header {
+  position: relative;
+  z-index: 20;
+}
+
+.placement-public-header-inner {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.placement-site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.placement-site-brand img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.placement-site-brand span {
+  display: grid;
+  line-height: 1.05;
+}
+
+.placement-site-brand strong,
+.placement-site-brand small {
+  color: #fff;
+}
+
+.placement-site-brand strong {
+  font-size: .95rem;
+  font-weight: 950;
+}
+
+.placement-site-brand small {
+  margin-top: 5px;
+  color: #f9b17a;
+  font-weight: 800;
+}
+
+.placement-public-header .public-nav {
+  margin-left: auto;
+}
+
+.placement-home-link {
+  white-space: nowrap;
+}
+
+.placement-site-page > .placement-shell {
+  min-height: 0;
+  flex: 1;
+}
+
+.placement-site-page .placement-shell > .placement-topbar {
+  display: none;
+}
+
+.placement-site-page .placement-stage {
+  min-height: 0;
+  padding: 52px 0;
+}
+
+.placement-site-page .placement-card {
+  max-width: 780px;
+}
+
+.placement-public-footer {
+  margin-top: 0;
+}
+
+.placement-public-footer-inner {
+  min-height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.placement-public-footer p {
+  margin: 0;
+  color: #fff;
+  font-weight: 750;
+}
+
+@media (max-width: 760px) {
+  .placement-public-header-inner {
+    min-height: 72px;
+  }
+
+  .placement-public-header .public-nav,
+  .placement-site-brand span {
+    display: none;
+  }
+
+  .placement-home-link {
+    margin-left: auto;
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+
+  .placement-site-page .placement-stage {
+    width: min(100% - 20px, 780px);
+    padding: 22px 0;
+  }
+
+  .placement-public-footer-inner {
+    min-height: 88px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .placement-public-footer p {
+    display: none;
+  }
+}
