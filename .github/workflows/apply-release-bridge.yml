@@ -65,4 +65,4 @@ jobs:
         shell: bash
         run: |
           cd release
-          git push --force origin HEAD:refs/heads/codex/release-candidate-bbd6507
+          git push origin HEAD:refs/heads/codex/release-candidate-bbd6507
