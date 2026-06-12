@@ -1,5 +1,6 @@
-import { mockTests } from '../data/mockTests';
+import { platformApi } from './platformApi';
 
 export async function getTests() {
-  return mockTests;
+  const data = await platformApi.results('student');
+  return data.tests || data.results || data.rows || [];
 }

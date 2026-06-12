@@ -1,20 +1,11 @@
-import { appsScriptApi } from './appsScriptApi';
-import { mockStudents } from '../data/mockStudents';
+import { platformApi } from './platformApi';
 
 export async function getStudents() {
-  try {
-    const data = await appsScriptApi.students();
-    return data.students || data || mockStudents;
-  } catch {
-    return mockStudents;
-  }
+  const data = await platformApi.get('/api/admin/students');
+  return data.students || data.rows || [];
 }
 
 export async function getStudent(id) {
-  try {
-    const data = await appsScriptApi.student(id);
-    return data.student || data;
-  } catch {
-    return mockStudents.find((student) => student.id === id) || mockStudents[0];
-  }
+  const students = await getStudents();
+  return students.find((student) => String(student.id || student.student_id) === String(id)) || null;
 }

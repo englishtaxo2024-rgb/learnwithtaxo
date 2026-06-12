@@ -1,7 +1,9 @@
 import { Router } from 'express';
 import { getDataSourceStatus, syncSource } from '../services/googleSheetsServer.js';
+import { requireAuth, requireRole } from '../middleware/auth.js';
 
 const router = Router();
+router.use(requireAuth, requireRole('admin'));
 router.post('/curriculum', async (_req, res) => res.json(await syncSource('curriculum')));
 router.post('/schedule', async (_req, res) => res.json(await syncSource('schedule')));
 router.post('/new-applications', async (_req, res) => res.json(await syncSource('new-applications')));

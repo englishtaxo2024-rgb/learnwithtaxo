@@ -2,25 +2,24 @@ function svgDataUri(svg) {
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
-const heroPosterSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Learn with Taxo leadership poster">
+const heroPosterSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Learn with Taxo leadership learning poster">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#04182c"/><stop offset=".55" stop-color="#082945"/><stop offset="1" stop-color="#061B30"/></linearGradient>
-    <radialGradient id="glow" cx="50%" cy="76%" r="36%"><stop stop-color="#f5d166" stop-opacity=".95"/><stop offset=".28" stop-color="#d4af37" stop-opacity=".42"/><stop offset="1" stop-color="#d4af37" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow" cx="50%" cy="76%" r="35%"><stop stop-color="#f5d166" stop-opacity=".95"/><stop offset=".28" stop-color="#d4af37" stop-opacity=".42"/><stop offset="1" stop-color="#d4af37" stop-opacity="0"/></radialGradient>
     <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#a77b18"/><stop offset=".45" stop-color="#f8df86"/><stop offset="1" stop-color="#d4af37"/></linearGradient>
     <linearGradient id="blue" x1="0" x2="1"><stop stop-color="#061B30"/><stop offset=".5" stop-color="#03a9f4"/><stop offset="1" stop-color="#123F6D"/></linearGradient>
   </defs>
   <rect width="900" height="1200" fill="url(#bg)"/><rect width="900" height="1200" fill="url(#glow)"/>
-  <path d="M42 410 C150 330 245 320 340 370" fill="none" stroke="#d4af37" stroke-width="2" opacity=".35"/>
-  <path d="M858 410 C740 330 650 325 560 375" fill="none" stroke="#d4af37" stroke-width="2" opacity=".35"/>
-  <path d="M74 160 Q92 72 178 72 H354 V160 H262 V275 H192 V160 Z" fill="#061B30" stroke="#45a8e8" stroke-width="2" opacity=".96"/>
-  <path d="M178 90 H308 Q280 142 224 142 H178 Z" fill="url(#blue)"/>
-  <path d="M112 244 C224 226 318 181 389 112" fill="none" stroke="url(#gold)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M45 410 C150 330 245 320 340 370" fill="none" stroke="#d4af37" stroke-width="2" opacity=".35"/>
+  <path d="M860 410 C740 330 650 325 560 375" fill="none" stroke="#d4af37" stroke-width="2" opacity=".35"/>
+  <text x="78" y="172" font-family="Arial Black,Arial,sans-serif" font-size="142" fill="#06213c" stroke="#4aa8e8" stroke-width="2">T</text>
+  <path d="M106 228 C224 214 318 181 389 112" fill="none" stroke="url(#gold)" stroke-width="24" stroke-linecap="round"/>
   <path d="M388 112 L376 166 L344 134 Z" fill="url(#gold)"/><path d="M145 265 Q203 226 263 265 Q205 238 145 265" fill="url(#gold)"/>
   <text x="360" y="225" font-family="Inter,Arial,sans-serif" font-size="64" font-weight="900" fill="#ffffff">Learn with</text>
   <text x="704" y="225" font-family="Inter,Arial,sans-serif" font-size="66" font-weight="900" fill="url(#blue)">Taxo</text>
   <line x1="370" y1="285" x2="520" y2="285" stroke="url(#gold)" stroke-width="5"/><line x1="675" y1="285" x2="825" y2="285" stroke="url(#gold)" stroke-width="5"/>
   <text x="548" y="300" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="44" letter-spacing="10" fill="#f7d777">Learn to Lead</text>
-  <text x="596" y="365" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="39" fill="#ffffff">اتعلم اليوم... واسبق بكره.</text>
+  <text x="596" y="365" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="39" fill="#ffffff">تعلّم اليوم... واسبق بكرة.</text>
   <text x="450" y="520" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#f4c65a">Knowledge is the first step,</text>
   <text x="450" y="565" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#f4c65a">leadership is the destination.</text>
   <text x="450" y="615" text-anchor="middle" font-family="Georgia,serif" font-size="42" font-style="italic" font-weight="700" fill="#fff1b6">Lead the future.</text>

@@ -1,41 +1,26 @@
-import { useState } from 'react';
 import { ImageOff } from 'lucide-react';
-import { brand } from '../../config/brand';
+import { useState } from 'react';
 
 export function SafeImage({
   src,
-  alt = '',
+  alt,
   className = '',
-  fallbackLabel = '',
+  fallbackLabel = 'Image coming soon',
   fallbackIcon: FallbackIcon = ImageOff,
   hideFallback = false,
-  loading = 'lazy',
-  decoding = 'async',
   ...props
 }) {
   const [failed, setFailed] = useState(!src);
-  const isLogo = typeof src === 'string' && src.includes('/assets/logo.png');
-  const label = fallbackLabel || alt;
 
-  if (failed && hideFallback && !isLogo) {
+  if (failed && hideFallback) {
     return null;
-  }
-
-  if (failed && isLogo) {
-    return (
-      <div className={`safe-image-fallback logo-image-fallback ${className}`} role="img" aria-label="Learn with Taxo logo unavailable">
-        <strong>{brand.headerName}</strong>
-        <span>{brand.tagline}</span>
-        <small>{brand.arabicTagline}</small>
-      </div>
-    );
   }
 
   if (failed) {
     return (
-      <div className={`safe-image-fallback ${className}`} role="img" aria-label={label || 'Image unavailable'}>
-        {FallbackIcon ? <FallbackIcon size={28} aria-hidden="true" /> : null}
-        {label ? <span>{label}</span> : null}
+      <div className={`safe-image-fallback ${className}`}>
+        <FallbackIcon size={28} />
+        <span>{fallbackLabel}</span>
       </div>
     );
   }
@@ -46,8 +31,8 @@ export function SafeImage({
       alt={alt}
       className={className}
       onError={() => setFailed(true)}
-      loading={loading}
-      decoding={decoding}
+      loading={props.loading || 'lazy'}
+      decoding={props.decoding || 'async'}
       {...props}
     />
   );

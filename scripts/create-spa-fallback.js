@@ -6,7 +6,7 @@ const indexFile = join(distDir, 'index.html');
 const fallbackFile = join(distDir, '404.html');
 
 if (!existsSync(indexFile)) {
-  throw new Error('dist/index.html was not found. Run vite build first.');
+  throw new Error('dist/index.html was not found. Run the Vite build first.');
 }
 
 copyFileSync(indexFile, fallbackFile);

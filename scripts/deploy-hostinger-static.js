@@ -30,7 +30,7 @@ function deploy() {
   copyDistToWorktree();
 
   run('git fetch origin main');
-  try { run('git branch -D hostinger-static', { stdio: 'ignore' }); } catch {}
+  run('git branch -D hostinger-static', { cwd: root, stdio: 'ignore' });
   run('git checkout --orphan hostinger-static');
   run('git rm -rf .');
 

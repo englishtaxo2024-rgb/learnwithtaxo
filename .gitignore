@@ -1,0 +1,20 @@
+node_modules/
+.env
+.env.*
+dist/
+.DS_Store
+
+# Local caches and temporary packaging artifacts
+.vite/
+*.log
+server/data/db.json
+server/uploads/
+taxo_*.csv
+*.zip
+tmp-*/
+deploy-assets/
+deploy-visuals/
+live-assets/
+ready-upload-*/
+release-*/
+tiny-visuals/

@@ -10,9 +10,10 @@ import syncRoutes from './routes/sync.js';
 import assetsRoutes from './routes/assets.js';
 import emailRoutes from './routes/email.js';
 import aiRoutes from './routes/ai.js';
-import { getDataSourceStatus } from './services/googleSheetsServer.js';
 import authRoutes from './routes/auth.js';
+import adminUsersRoutes from './routes/adminUsers.js';
 import recordsRoutes from './routes/records.js';
+import platformRoutes from './routes/platform.js';
 import placementRoutes from './routes/placement.js';
 
 const app = express();
@@ -24,19 +25,27 @@ const distIndexPath = path.join(distDir, 'index.html');
 
 app.use(cors({ origin: process.env.SITE_URL || true }));
 app.use(express.json({ limit: '10mb' }));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-
 app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'learn-with-taxo-api' }));
 app.use('/api/auth', authRoutes);
 app.use('/api/placement', placementRoutes);
+app.use('/api/admin', adminUsersRoutes);
 app.use('/api/records', recordsRoutes);
 app.use('/api/google-sheets', googleSheetsRoutes);
-app.get('/api/data-sources/status', async (_req, res) => res.json(await getDataSourceStatus()));
 app.use('/api/apps-script', appsScriptRoutes);
 app.use('/api/sync', syncRoutes);
 app.use('/api/assets', assetsRoutes);
 app.use('/api/email', emailRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api', platformRoutes);
+
+app.use((error, _req, res, _next) => {
+  console.error(error);
+  const status = Number(error.status || error.statusCode || 500);
+  res.status(status).json({
+    error: status >= 500 && status !== 503 ? 'The server could not complete this request.' : error.message,
+    code: error.code || 'REQUEST_FAILED'
+  });
+});
 
 app.use(express.static(distDir));
 app.get('*', (req, res, next) => {

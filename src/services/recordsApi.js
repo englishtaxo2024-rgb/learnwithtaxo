@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+const CONFIGURED_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
 function token() {
   return localStorage.getItem('taxo_token');
@@ -8,15 +8,16 @@ async function request(path, options = {}) {
   const headers = { ...(options.headers || {}) };
   if (!(options.body instanceof FormData)) headers['Content-Type'] = 'application/json';
   if (token()) headers.Authorization = `Bearer ${token()}`;
-  const response = await fetch(`${API_BASE}${path}`, { ...options, headers });
+  const base = CONFIGURED_API_BASE.endsWith('/api') && path.startsWith('/api') ? CONFIGURED_API_BASE.slice(0, -4) : CONFIGURED_API_BASE;
+  const response = await fetch(`${base}${path}`, { ...options, headers });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(data.error || `Request failed: ${response.status}`);
   return data;
 }
 
 export const recordsApi = {
-  login: async (email, password) => {
-    const data = await request('/api/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) });
+  login: async ({ identifier, email, accessCode, password, requestedRole }) => {
+    const data = await request('/api/auth/login', { method: 'POST', body: JSON.stringify({ identifier, email, accessCode, password, requestedRole }) });
     localStorage.setItem('taxo_token', data.token);
     return data;
   },
@@ -45,6 +46,13 @@ export const recordsApi = {
     form.append('file', file);
     return request(`/api/records/import/${kind}`, { method: 'POST', body: form });
   },
+  importUsers: ({ teachersCsv, studentsCsv }) => {
+    const form = new FormData();
+    if (teachersCsv) form.append('teachersCsv', teachersCsv);
+    if (studentsCsv) form.append('studentsCsv', studentsCsv);
+    return request('/api/admin/import-users', { method: 'POST', body: form });
+  },
+  resetAccessCode: ({ role, userId }) => request('/api/admin/access-codes', { method: 'POST', body: JSON.stringify({ role, userId }) }),
   syncGoogleStudents: () => request('/api/records/sync/google-students', { method: 'POST' }),
   uploadMaterial: (payload) => {
     const form = new FormData();

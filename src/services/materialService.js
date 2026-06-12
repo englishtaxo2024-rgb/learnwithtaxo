@@ -1,5 +1,6 @@
-import { mockMaterialMap } from '../data/mockMaterialMap';
+import { platformApi } from './platformApi';
 
 export async function getMaterialMap() {
-  return mockMaterialMap;
+  const data = await platformApi.materials();
+  return data.materials || data.rows || [];
 }

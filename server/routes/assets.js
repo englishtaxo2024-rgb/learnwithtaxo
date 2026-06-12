@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import multer from 'multer';
 import path from 'path';
+import { requireAuth, requireRole } from '../middleware/auth.js';
 
 const router = Router();
 const storage = multer.diskStorage({
@@ -9,6 +10,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 const assets = [];
+router.use(requireAuth, requireRole('admin'));
 
 router.get('/', (_req, res) => res.json({ assets }));
 router.post('/upload', upload.single('file'), (req, res) => {

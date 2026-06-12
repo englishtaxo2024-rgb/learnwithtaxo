@@ -22,10 +22,7 @@ export function LanguageProvider({ children }) {
     document.documentElement.dir = dir;
   }, [lang, dir]);
 
-  const value = useMemo(
-    () => ({ lang, dir, setLang, t: translations[lang] || translations.en }),
-    [lang, dir]
-  );
+  const value = useMemo(() => ({ lang, dir, setLang, t: translations[lang] || translations.en }), [lang, dir]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }

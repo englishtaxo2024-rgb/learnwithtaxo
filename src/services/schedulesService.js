@@ -1,5 +1,6 @@
-import { mockSchedules } from '../data/mockSchedules';
+import { platformApi } from './platformApi';
 
 export async function getSchedules() {
-  return mockSchedules;
+  const data = await platformApi.schedule();
+  return data.schedule || data.rows || [];
 }
