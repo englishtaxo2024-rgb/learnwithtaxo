@@ -37,9 +37,9 @@ jobs:
           test -f dist/index.html
           test -f dist/404.html
           test -d dist/assets
-          test -f dist/assets/logo.png
           test -f dist/assets/no
           test -f dist/assets/no2
+          test -f dist/assets/logo.png
           find dist/assets -type f | grep -E '\.(js|css)$'
           ls -la dist
           ls -la dist/assets
