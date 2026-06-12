@@ -29,12 +29,15 @@ jobs:
       - name: Reconstruct release patch
         shell: bash
         run: |
-          sudo apt-get update
-          sudo apt-get install -y brotli
           cat bridge/.release-bridge/chunk-*.txt > /tmp/release.patch.br.b64
-          base64 --decode /tmp/release.patch.br.b64 > /tmp/release.patch.br
-          brotli --decompress /tmp/release.patch.br --output=/tmp/release.patch
-          echo "E59805C86995BBA03AF37E532B0ED912FF12FAC15B72B5A8819511A79A4BAD75  /tmp/release.patch" | sha256sum --check
+          node <<'NODE'
+          const fs = require('fs');
+          const zlib = require('zlib');
+          const encoded = fs.readFileSync('/tmp/release.patch.br.b64', 'utf8').replace(/\s+/g, '');
+          const patch = zlib.brotliDecompressSync(Buffer.from(encoded, 'base64'));
+          fs.writeFileSync('/tmp/release.patch', patch);
+          NODE
+          echo "e59805c86995bba03af37e532b0ed912ff12fac15b72b5a8819511a79a4bad75  /tmp/release.patch" | sha256sum --check
 
       - name: Apply and publish release
         shell: bash
