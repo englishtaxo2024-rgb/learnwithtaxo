@@ -1,0 +1,46 @@
+name: Apply release bridge
+
+on:
+  push:
+    branches:
+      - codex/release-bridge-bbd6507
+    paths:
+      - .github/workflows/apply-release-bridge.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release bridge
+        uses: actions/checkout@v4
+        with:
+          ref: codex/release-bridge-bbd6507
+          path: bridge
+
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: release
+
+      - name: Reconstruct release patch
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y brotli
+          cat bridge/.release-bridge/chunk-*.txt > /tmp/release.patch.br.b64
+          base64 --decode /tmp/release.patch.br.b64 > /tmp/release.patch.br
+          brotli --decompress /tmp/release.patch.br --output=/tmp/release.patch
+          echo "E59805C86995BBA03AF37E532B0ED912FF12FAC15B72B5A8819511A79A4BAD75  /tmp/release.patch" | sha256sum --check
+
+      - name: Apply and publish release
+        shell: bash
+        run: |
+          cd release
+          git config user.name "englishtaxo2024-rgb"
+          git config user.email "englishtaxo2024@gmail.com"
+          git am /tmp/release.patch
+          git push origin HEAD:main
