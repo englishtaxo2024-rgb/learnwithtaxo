@@ -29,11 +29,25 @@ jobs:
       - name: Reconstruct release patch
         shell: bash
         run: |
-          cat bridge/.release-bridge/chunk-*.txt > /tmp/release.patch.br.b64
           node <<'NODE'
           const fs = require('fs');
           const zlib = require('zlib');
-          const encoded = fs.readFileSync('/tmp/release.patch.br.b64', 'utf8').replace(/\s+/g, '');
+          const base = 'bridge/.release-bridge';
+          const chunks = [1, 2, 3, 4, 5].map((number) =>
+            fs.readFileSync(`${base}/chunk-${String(number).padStart(2, '0')}.txt`, 'utf8')
+          );
+
+          if (chunks[0].length !== 39001 || chunks[0][25590] !== '7') {
+            throw new Error('Unexpected chunk-01 transfer state');
+          }
+          chunks[0] = chunks[0].slice(0, 25590) + chunks[0].slice(25591);
+
+          if (chunks[2].length !== 39000 || chunks[2][31377] !== 't') {
+            throw new Error('Unexpected chunk-03 transfer state');
+          }
+          chunks[2] = chunks[2].slice(0, 31377) + 'T' + chunks[2].slice(31378);
+
+          const encoded = chunks.join('').replace(/\s+/g, '');
           const patch = zlib.brotliDecompressSync(Buffer.from(encoded, 'base64'));
           fs.writeFileSync('/tmp/release.patch', patch);
           NODE
