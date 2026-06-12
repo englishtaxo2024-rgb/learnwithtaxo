@@ -53,11 +53,16 @@ jobs:
           NODE
           echo "e59805c86995bba03af37e532b0ed912ff12fac15b72b5a8819511a79a4bad75  /tmp/release.patch" | sha256sum --check
 
-      - name: Apply and publish release
+      - name: Apply release patch
         shell: bash
         run: |
           cd release
           git config user.name "englishtaxo2024-rgb"
           git config user.email "englishtaxo2024@gmail.com"
           git am /tmp/release.patch
-          git push origin HEAD:main
+
+      - name: Publish release candidate
+        shell: bash
+        run: |
+          cd release
+          git push --force origin HEAD:refs/heads/codex/release-candidate-bbd6507
